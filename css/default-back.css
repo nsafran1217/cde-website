@@ -29,10 +29,6 @@ div.navbar {
         url(/img/default/navmenu-mid.png) center center repeat-y;
 }
 
-/* Home link styling */
-.home-link {
-    background: url(/img/default/button-home-back.png) center center no-repeat;
-}
 
 /* Section headings */
 .section-heading {
@@ -49,12 +45,3 @@ div.navbar {
     background-color: #4992A7;
 }
 
-/* Section links (main categories like Silicon Graphics, Sun, HP) */
-.section-link {
-    background: url(/img/default/button-section-back.png) center center no-repeat;
-}
-
-/* Subsection links (subcategories like O2, Octane under Silicon Graphics) */
-.subsection-link {
-    background: url(/img/default/button-subsection-back.png) left center no-repeat;
-}

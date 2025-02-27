@@ -58,6 +58,18 @@ div.navbar {
 }
 */
 
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #aeb2c3;
+    border: 3px outset #aeb2c3;
+    border-top-color: #dcdee5;
+    border-left-color: #dcdee5;
+    border-right-color: #5d6069;
+    border-bottom-color: #5d6069;
+
+}
 
 
 /* Section headings */
@@ -65,10 +77,7 @@ div.navbar {
     background: url(/img/sun/navmenu-mid-section.png) top center no-repeat;
     color: black
 }
-/* Home link styling */
-.home-link {
-    background: url(/img/sun/button-home-back.png) center center no-repeat;
-}
+
 
 .nav-box.section-link,
 .nav-box.subsection-link {
@@ -79,12 +88,3 @@ div.navbar {
     background-color:  #AEB2C3;
 }
 
-/* Section links (main categories like Silicon Graphics, Sun, HP) */
-.section-link {
-    background: url(/img/sun/button-section-back.png) center center no-repeat;
-}
-
-/* Subsection links (subcategories like O2, Octane under Silicon Graphics) */
-.subsection-link {
-    background: url(/img/sun/button-subsection-back.png) left center no-repeat;
-}

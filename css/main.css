@@ -88,23 +88,95 @@ img.inline {
     /*position: relative;TEST REMOVE */
 }
 
-.cde-button {
-    
+.cde-menu {
+
+    position: relative;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+
 }
-.cde-button ul {
+
+.cde-menu ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border: 0px;
     
 }
 
-/* Section headings */
-.section-heading {
+.cde-menu ul li.section-link,
+.cde-menu ul li.subsection-link,
+.cde-menu ul li.home-link
+ {
+    background-color: #4992a7;
+    border: 3px outset #4992a7;
+    border-top-color: #adced7;
+    border-left-color: #adced7;
+    border-right-color: #244953;
+    border-bottom-color: #244953;
+    border-style: solid;
+    padding-left: 4px;
+    display: block;
+    align-items: center; 
+    padding: 8px;
+    margin-bottom: 4px;
+}
+.home-link {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    
+    margin-bottom: 4px;
+    padding: 6px 20px;
+    color: yellow;
+    margin: 15px;
+    margin-top: 32px;
+}
+.cde-menu ul li.section-link {
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 16px;
+    text-align: center;
+    margin: 4px 15px;
+
+}
+
+.cde-menu ul li.subsection-link {
+    text-align: left;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 4px;
+
+    margin: 4px 15px;
+    margin-left: 40px;
+    
+}
+
+
+.cde-menu ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #000 ;
+}
+
+.cde-menu ul li a img {
+    float: none;
+    display: inline-block;
+}
+
+/* section headings */
+.cde-menu li.section-heading {
+    border-style: none;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
     padding: 8px;
     padding-left: 20px;
-}
-td.section-heading {
-    padding: 1px 1px;
+
 }
 
 /* Common button styling */
@@ -121,61 +193,32 @@ td.section-heading {
     background-origin: border-box;
 }
 
-/* Home link styling */
-.home-link {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 42px;
-    margin-bottom: 4px;
-    padding: 6px 20px;
-    color: yellow;
-}
 
-/* Section links (main categories like Silicon Graphics, Sun, HP) */
-.section-link {
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 16px;
-}
-
-/* Subsection links (subcategories like O2, Octane under Silicon Graphics) */
-.subsection-link {
-    text-align: left;
-    font-size: 12px;
-    text-decoration: none;
-    padding-left: 6px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin: 2px auto;
-    margin-left: 15px;
-}
 
 /* Hover effects */
-.section-link:hover,
-.subsection-link:hover,
-.home-link:hover {
+.cde-menu ul li.section-link:hover,
+.cde-menu ul li.subsection-link:hover,
+.cde-menu ul li.home-link:hover {
     text-decoration: underline;
     /*background-color: #af3c3c;*/
 }
 
-tr.sgi-nested {
+.cde-menu ul li.sgi-nested {
     display: none;
 }
 
-tr.sun-nested {
+.cde-menu ul li.sun-nested {
     display: none;
 }
 
-tr.hp-nested {
+.cde-menu ul li.hp-nested {
     display: none;
 }
 
-tr.dec-nested {
+.cde-menu ul li.dec-nested {
     display: none;
 }
 
-tr.ibm-nested {
+.cde-menu ul li.ibm-nested {
     display: none;
 }
