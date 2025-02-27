@@ -83,6 +83,14 @@ td.section-heading {
     /*position: relative;TEST REMOVE */
 }
 
+/* Section headings */
+.section-heading {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px;
+    padding-left: 20px;
+}
 
 
 /* Common button styling */
@@ -110,26 +118,11 @@ td.section-heading {
     color: yellow;
 }
 
-/* Section headings */
-.section-heading {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 8px;
-    padding-left: 20px;
-}
-
-.section-heading span {
-    background-color: #4992A7;
-}
-
 /* Section links (main categories like Silicon Graphics, Sun, HP) */
 .section-link {
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
-    background-size: contain;
     padding: 12px 16px;
 }
 
@@ -142,8 +135,7 @@ td.section-heading {
     padding-top: 6px;
     padding-bottom: 6px;
     margin: 2px auto;
-    margin-left: 47px;
-    background-size: contain;
+    margin-left: 15px;
 }
 
 /* Hover effects */
