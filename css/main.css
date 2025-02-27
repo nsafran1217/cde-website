@@ -31,11 +31,18 @@ td.main-bodytd {
     max-width: 800px;
     margin: 0 auto;
     min-width: 300px;
-
-
+    margin-bottom: 20px;
     
-}
 
+}
+table.specs,
+table.specs th,
+table.specs td {
+    border: 1px black solid;
+    border-collapse: collapse;
+    cellspacing: 0px;
+    padding: 1px 1px;
+}
 /*title at top of a window*/
 .window-title {
     position: absolute;
@@ -57,7 +64,6 @@ td.main-bodytd {
     margin-top: 40px;
     /* space down for terminal png*/
     color: white;
-
 }
 
 /*Links in main body*/
@@ -65,16 +71,15 @@ td.main-bodytd {
     color: rgb(236, 233, 233);
 }
 
+img.inline {
+    float: right;
+    margin: 4px;
+    margin-left: 16px;
+}
+
 #nav {
     width: 100%;
 }
-
-
-
-td.section-heading {
-    padding: 1px 1px;
-}
-
 .navbar {
     width: 250px;
     position: relative;
@@ -82,6 +87,7 @@ td.section-heading {
     /*vertical-align: top;TEST REMOVE */
     /*position: relative;TEST REMOVE */
 }
+
 
 /* Section headings */
 .section-heading {
@@ -91,7 +97,9 @@ td.section-heading {
     padding: 8px;
     padding-left: 20px;
 }
-
+td.section-heading {
+    padding: 1px 1px;
+}
 
 /* Common button styling */
 .nav-box {
