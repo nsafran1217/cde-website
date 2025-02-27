@@ -22,7 +22,7 @@ body {
 
 }
 
-.navbar {
+div.navbar {
     /*order is important*/
     background: url(/img/sun/navmenu-top.png) top center no-repeat,
         url(/img/sun/navmenu-bot.png) bottom center no-repeat,
