@@ -1,0 +1,170 @@
+body {
+    image-rendering: pixelated;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* all backgroun images are set in default-back.css or sun-back.css*/
+
+table {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    cellpading: 0px;
+    cellspacing: 0px;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+td {
+    vertical-align: top;
+    padding: 0px 10px
+}
+td.main-bodytd {
+    width: 100%;
+}
+
+/*Mainly setups up the terminal background*/
+.main-body-back {
+    flex-grow: 1;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+}
+
+/*title at top of a window*/
+.window-title {
+    position: absolute;
+    /* Fixes the position */
+    top: 0px;
+    font-size: 14px;
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Ensures exact centering */
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.main-body {
+    margin-top: 40px;
+    /* space down for terminal png*/
+    color: white;
+}
+
+/*Links in main body*/
+.main-body a {
+    color: rgb(236, 233, 233);
+}
+
+#nav {
+    width: 100%;
+}
+
+
+
+td.section-heading {
+    padding: 1px 1px;
+}
+
+.navbar {
+    width: 250px;
+    background-size: 100% auto, 100% auto, 100% auto;
+    vertical-align: top;
+    position: relative;
+}
+td.navbartd {
+    width: 250px;
+    position: relative;
+}
+
+
+/* Common button styling */
+.nav-box {
+    display: block;
+    max-width: 220px;
+    margin: 1px auto;
+    /* Center buttons */
+    padding: 10px 0;
+    text-align: center;
+    /* Button background */
+    background-size: contain;
+    /* Prevents stretching */
+    background-origin: border-box;
+}
+
+/* Home link styling */
+.home-link {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 42px;
+    margin-bottom: 4px;
+    padding: 6px 20px;
+    color: yellow;
+}
+
+/* Section headings */
+.section-heading {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 8px;
+    padding-left: 20px;
+}
+
+.section-heading span {
+    background-color: #4992A7;
+}
+
+/* Section links (main categories like Silicon Graphics, Sun, HP) */
+.section-link {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-size: contain;
+    padding: 12px 16px;
+}
+
+/* Subsection links (subcategories like O2, Octane under Silicon Graphics) */
+.subsection-link {
+    text-align: left;
+    font-size: 12px;
+    text-decoration: none;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 2px auto;
+    margin-left: 47px;
+    background-size: contain;
+}
+
+/* Hover effects */
+.section-link:hover,
+.subsection-link:hover,
+.home-link:hover {
+    text-decoration: underline;
+    /*background-color: #af3c3c;*/
+}
+
+tr.sgi-nested {
+    display: none;
+}
+
+tr.sun-nested {
+    display: none;
+}
+
+tr.hp-nested {
+    display: none;
+}
+
+tr.dec-nested {
+    display: none;
+}
+
+tr.ibm-nested {
+    display: none;
+}
