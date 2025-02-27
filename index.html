@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Computer Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/default-back.css">
+
+<body>
+    <table class="main-table">
+        <tbody>
+            <tr>
+                <td class="navbartd">
+                    <div class="navbar">
+                        <div id="nav-container"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="main-body-back">
+                        <div class="window-title">Terminal - Home Page</div>
+
+                        <div class="main-body">
+                            <h2>My Projects and computers</h2>
+                            <p>
+                                This website will serve at documentation for my computer and electronic projects.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>Various UNIX workstations and servers:</li>
+                                        <ul>
+                                            <li><a href="sun/sun.html">Sun Microsystems</a></li>
+                                            <li><a href="sgi/sgi.html">Silicon Graphics</a></li>
+                                            <li><a href="hp/hp.html">HP</a></li>
+                                            <li><a href="dec/dec.html">Digital</a></li>
+                                            <li><a href="ibm/ibm.html">IBM</a></li>
+                                            <li><a href="next/next.html">NeXT</a></li>
+
+                                        </ul>
+                                    <li><a href="z80/z80.html"> A custom Z80 computer</a></li>
+                                    <li><a href="nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
+                                    <li><a href="nixie/soyuz.html">Soyuz 744H clock replica</a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <script>
+        fetch('/html/nav.html')  // Ensure it loads correctly from any subdirectory
+            .then(response => response.text())
+            .then(data => document.getElementById('nav-container').innerHTML = data)
+            .catch(error => console.error('Error loading navigation:', error));
+
+    </script>
+
+</body>
+
+</html>

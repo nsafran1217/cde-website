@@ -1,0 +1,410 @@
+a.header1, a.menu-title {
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 8px;
+	margin: 0px;
+}
+
+a.header2, a.menu-item {
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 8px;
+	margin: 0px;
+}
+
+a.header3 {
+	text-decoration: none;
+}
+
+a.home-link {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	font-size: 32px;
+	padding: 16px;
+	border: 1px solid;
+	border-color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+}
+
+a.link {
+	text-decoration: underline;
+}
+
+a.section-link {
+	display: block;
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+a.subsection-link {
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000000;
+}
+
+a.page-link {
+	display: block;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+a.menu-item:hover, a.menu-title:hover,
+a.section-link:hover, a.subsection-link:hover, a.page-link:hover {
+	text-decoration: underline;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+}
+
+div {
+	position: relative;
+	margin: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: auto;
+}
+
+div.figure-set, table.figure-set, div.image-map, img.image-map {
+	margin-left: auto;
+	margin-right: auto;
+	align: center;
+	text-align: center;
+}
+
+div.command {
+	font-family: Courier, "Courier New", monospace;
+	border: dashed 1px;
+	background-color: #cccccc;
+	line-height: 2px;
+}
+
+div.h2 {
+	margin-left: 8px;
+}
+
+div.h3 {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+div.menu {
+	padding: 0px;
+	padding-top: 8px;
+	width: auto;
+	margin: 8px;
+	margin-bottom: 16px;
+	border: 1px solid;
+}
+
+div.menu-item {
+	border: 1px solid;
+	margin: 4px;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-color: #ffffff;
+}
+
+div.menu-title {
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+div.navbar {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	padding: 8px;
+	border-bottom: 1px solid;
+}
+
+div.news {
+	border-top: 1px solid;
+	padding-top: 8px;
+	padding-bottom: 16px;
+}
+
+div.section-link {
+	margin-top: 12px;
+	margin-bottom: 2px;
+	font-size: 16px;
+	padding: 5px;
+	border: 1px solid;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+div.subsection-link {
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	padding: 5px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border: 1px solid;
+	text-decoration: none;
+	color: #000000;
+}
+
+div.page-link {
+	font-size: 12px;
+	margin-left: 16px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	padding: 5px;
+	padding-left: 24px;
+	padding-right: 16px;
+	border: 1px solid;
+	text-decoration: none;
+	color: #000000;
+}
+
+div.subchapter {
+	margin-left: 8px;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+h1.main-title {
+	font-size: 32px;
+	padding: 2px;
+	margin: 0px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+h2.link {
+	text-decoration: underline;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin-bottom: 2px;
+}
+
+h3.link {
+	text-decoration: underline;
+}
+
+img {
+	border: none;
+}
+
+img.figure {
+	border: 1px solid;
+	margin: 4px;
+	border-color: #000000;
+}
+
+img.icon {
+	border: none;
+	vertical-align: middle;
+}
+
+img.inline {
+	float: right;
+	margin: 4px;
+	margin-left: 16px;
+}
+
+img.bullet {
+	float: left;
+	margin: 4px;
+	margin-right: 16px;
+}
+
+p {
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+	color: #000000;
+}
+
+p.caption {
+	font-style: italic;
+	text-align: center;
+	padding: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+p.footer {
+	text-align: center;
+}
+
+p.footnote {
+	text-align: right;
+}
+
+p.main-title {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 6px;
+	margin: 0px;
+}
+
+p.menu-item {
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin-top: 8px;
+	margin-bottom: 4px;
+	padding: 2px;
+}
+
+p.menu-title {
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin: 0;
+	padding: 8px;
+}
+
+p.navigation {
+	margin: 0px;
+	width: 100%;
+}
+
+p.next {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+}
+
+p.previous {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+
+pre.input {
+	font-weight: bold;
+}
+
+table.bordered {
+	border: 1px solid;
+	border-color: #000000;
+}
+
+table.warning {
+	border: 1px solid;
+	border-color: #ff0000;
+}
+
+td {
+	vertical-align: top;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+td.bordered {
+	border: 1px solid;
+	border-color: #000000;
+}
+
+td.caption {
+	font-weight: bold;
+}
+
+td.command {
+	font-size: 12px;
+	font-family: courier;
+	line-height: 5px;
+}
+
+td.content {
+	padding: 10px;
+	width: 100%;
+}
+
+td.figure {
+	text-align: center;
+	padding: 4px;
+	border: solid 1px;
+	width: 320px;
+}
+
+td.footer {
+	padding: 8px;
+	margin: 0;
+	border-top: solid 1px;
+	text-align: center;
+}
+
+td.header {
+	font-weight: bold;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid;
+	border-color: #000000;
+	padding: 2px;
+}
+
+td.history-next {
+	width: 15%;
+	text-align: right;
+}
+
+td.history-prev {
+	width: 15%;
+	text-align: left;
+}
+
+td.main-title {
+	text-align: left;
+	vertical-align: center;
+}
+
+td.menu {
+	width: 50%;
+}
+
+td.navigation {
+	padding: 16px;
+}
+
+td.normal {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+td.product {
+	text-align: center;
+}
+
