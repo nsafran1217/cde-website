@@ -9,27 +9,31 @@ table {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
-    cellpading: 0px;
-    cellspacing: 0px;
     border-collapse: separate;
     border-spacing: 2px;
 }
-
 td {
     vertical-align: top;
     padding: 0px 10px
 }
+/* TEST REMOVE
 td.main-bodytd {
     width: 100%;
 }
-
+*/
 /*Mainly setups up the terminal background*/
 .main-body-back {
-    flex-grow: 1;
+    /*flex-grow: 1; TEST REMOVE */
     padding: 20px;
     position: relative;
     text-align: left;
-    vertical-align: top;
+   /* vertical-align: top; TEST REMOVE*/
+    max-width: 800px;
+    margin: 0 auto;
+    min-width: 300px;
+
+
+    
 }
 
 /*title at top of a window*/
@@ -38,6 +42,8 @@ td.main-bodytd {
     /* Fixes the position */
     top: 0px;
     font-size: 14px;
+    height: 14px;
+    overflow: hidden;
     left: 50%;
     /* Center horizontally */
     transform: translateX(-50%);
@@ -51,6 +57,7 @@ td.main-bodytd {
     margin-top: 40px;
     /* space down for terminal png*/
     color: white;
+
 }
 
 /*Links in main body*/
@@ -70,14 +77,12 @@ td.section-heading {
 
 .navbar {
     width: 250px;
-    background-size: 100% auto, 100% auto, 100% auto;
-    vertical-align: top;
     position: relative;
+    /*background-size: 100% auto, 100% auto, 100% auto; TEST REMOVE */
+    /*vertical-align: top;TEST REMOVE */
+    /*position: relative;TEST REMOVE */
 }
-td.navbartd {
-    width: 250px;
-    position: relative;
-}
+
 
 
 /* Common button styling */
