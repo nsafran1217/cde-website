@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vintage Computer Collection</title>
+    <title>nsafran.com - Home</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/default-back.css">
+
+
+
+
+
 </head>
 <body>
-
-    <table class="main-table">
+    <table>
         <tbody>
             <tr>
                 <td class="navbar">
@@ -19,7 +23,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="main-body-back">
+                    <div class="main-body-container">
                         <div class="window-title">Terminal - Home Page</div>
 
                         <div class="main-body">
@@ -37,7 +41,6 @@
                                             <li><a href="dec/dec.html">Digital</a></li>
                                             <li><a href="ibm/ibm.html">IBM</a></li>
                                             <li><a href="next/next.html">NeXT</a></li>
-
                                         </ul>
                                     <li><a href="z80/z80.html"> A custom Z80 computer</a></li>
                                     <li><a href="nixie/nixie.html">Projects using Nixie tubes and VFD tubes</a></li>
@@ -47,23 +50,15 @@
                         </div>
                     </div>
                 </td>
-                <td class="spacer" style=" min-width: 0px; max-width: 260px; padding: 0;"></td>
             </tr>
         </tbody>
     </table>
-
-
-
-
-
     <script>
-        fetch('/html/nav.html')  // Ensure it loads correctly from any subdirectory
+        fetch('/html/nav.html') //insert nav bar
             .then(response => response.text())
             .then(data => document.getElementById('nav-container').innerHTML = data)
             .catch(error => console.error('Error loading navigation:', error));
 
     </script>
-
 </body>
-
 </html>

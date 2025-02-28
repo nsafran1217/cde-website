@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vintage Computer Collection</title>
+    <title>nsafran.com - Sun</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/sun-back.css">
     <style>
@@ -23,7 +23,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="main-body-back">
+                    <div class="main-body-container">
                         <div class="window-title">Terminal - Sun Microsystems</div>
 
                         <div class="main-body">
@@ -40,7 +40,7 @@
         </tbody>
     </table>
     <script>
-        fetch('/html/nav.html')  // Ensure it loads correctly from any subdirectory
+        fetch('/html/nav.html')  //insert nav bar
             .then(response => response.text())
             .then(data => document.getElementById('nav-container').innerHTML = data)
             .catch(error => console.error('Error loading navigation:', error));

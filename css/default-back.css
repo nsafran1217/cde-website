@@ -5,7 +5,7 @@ body {
 }
 
 /*Mainly setups up the terminal background*/
-.main-body-back {
+.main-body-container {
     /*order is important*/
     background: url(/img/default/term-topleft.png) top left no-repeat,
         url(/img/default/term-topright.png) top right no-repeat,
