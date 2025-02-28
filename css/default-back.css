@@ -28,16 +28,14 @@ div.navbar {
         url(/img/default/navmenu-bot.png) bottom center no-repeat,
         url(/img/default/navmenu-mid.png) center center repeat-y;
 }
-
-
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: white;
+}
 /* Section headings */
 .section-heading {
     background: url(/img/default/navmenu-mid-section.png) top center no-repeat;
-    color: white;
-}
-
-.nav-box.section-link,
-.nav-box.subsection-link {
     color: white;
 }
 

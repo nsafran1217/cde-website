@@ -26,8 +26,7 @@ div.navbar {
     /*order is important*/
     background: url(/img/sun/navmenu-top.png) top center no-repeat,
         url(/img/sun/navmenu-bot.png) bottom center no-repeat,
-        url(/img/sun/navmenu-mid.png) center center repeat-y;
-        
+        url(/img/sun/navmenu-mid.png) center center repeat-y;      
 }
 /*
 .navbar {
@@ -68,22 +67,17 @@ div.navbar {
     border-left-color: #dcdee5;
     border-right-color: #5d6069;
     border-bottom-color: #5d6069;
-
+ }
+/* text color */
+.cde-menu ul li,
+.cde-menu ul li a {
+    color: black;
 }
-
-
 /* Section headings */
 .section-heading {
     background: url(/img/sun/navmenu-mid-section.png) top center no-repeat;
     color: black
 }
-
-
-.nav-box.section-link,
-.nav-box.subsection-link {
-    color: black;
-}
-
 .section-heading span {
     background-color:  #AEB2C3;
 }

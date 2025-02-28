@@ -3,7 +3,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* all backgroun images are set in default-back.css or sun-back.css*/
+/* all background images are set in default-back.css or sun-back.css*/
 
 table {
     width: 100%;
@@ -76,7 +76,7 @@ img.inline {
     margin: 4px;
     margin-left: 16px;
 }
-
+/* navigation bar */
 #nav {
     width: 100%;
 }
@@ -86,35 +86,35 @@ img.inline {
     /*background-size: 100% auto, 100% auto, 100% auto; TEST REMOVE */
     /*vertical-align: top;TEST REMOVE */
     /*position: relative;TEST REMOVE */
+    padding-bottom: 20px;
 }
 
 .cde-menu {
-
     position: relative;
     left: 0;
     top: 0;
     box-sizing: border-box;
-
 }
 
 .cde-menu ul {
     list-style-type: none;
     padding: 10px;
     margin: 0;
-    border: 0px;
-    
+    border: 0px;   
 }
 
 .cde-menu ul li.section-link,
 .cde-menu ul li.subsection-link,
 .cde-menu ul li.home-link
  {
+    /* this is overridden for different styles */
     background-color: #4992a7;
     border: 3px outset #4992a7;
     border-top-color: #adced7;
     border-left-color: #adced7;
     border-right-color: #244953;
     border-bottom-color: #244953;
+    
     border-style: solid;
     padding-left: 4px;
     display: block;
@@ -122,6 +122,7 @@ img.inline {
     padding: 8px;
     margin-bottom: 4px;
 }
+/* home link,top button*/
 .home-link {
     font-size: 24px;
     font-weight: bold;
@@ -129,45 +130,9 @@ img.inline {
     
     margin-bottom: 4px;
     padding: 6px 20px;
-    color: yellow;
     margin: 15px;
     margin-top: 32px;
 }
-.cde-menu ul li.section-link {
-
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 16px;
-    text-align: center;
-    margin: 4px 15px;
-
-}
-
-.cde-menu ul li.subsection-link {
-    text-align: left;
-    font-size: 12px;
-    text-decoration: none;
-    padding: 4px;
-
-    margin: 4px 15px;
-    margin-left: 40px;
-    
-}
-
-
-.cde-menu ul li a {
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    color: #000 ;
-}
-
-.cde-menu ul li a img {
-    float: none;
-    display: inline-block;
-}
-
 /* section headings */
 .cde-menu li.section-heading {
     border-style: none;
@@ -178,29 +143,42 @@ img.inline {
     padding-left: 20px;
 
 }
-
-/* Common button styling */
-.nav-box {
-    display: block;
-    max-width: 220px;
-    margin: 1px auto;
-    /* Center buttons */
-    padding: 10px 0;
+/*main section links*/
+.cde-menu ul li.section-link {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 16px;
     text-align: center;
-    /* Button background */
-    background-size: contain;
-    /* Prevents stretching */
-    background-origin: border-box;
+    margin: 4px 15px;
+
+}
+/*subsection links*/
+.cde-menu ul li.subsection-link {
+    text-align: left;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px 15px;
+    margin-left: 40px;
 }
 
+.cde-menu ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
 
+.cde-menu ul li a img {
+    float: none;
+    display: inline-block;
+}
 
 /* Hover effects */
 .cde-menu ul li.section-link:hover,
 .cde-menu ul li.subsection-link:hover,
 .cde-menu ul li.home-link:hover {
     text-decoration: underline;
-    /*background-color: #af3c3c;*/
 }
 
 .cde-menu ul li.sgi-nested {
