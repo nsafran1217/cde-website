@@ -88,7 +88,14 @@ img.fullwidth {
     margin-left: auto;
     margin-right: auto;
     display: block;
-
+}
+img.halfwidth {
+    max-width: 100%;
+    image-rendering: auto;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 table.image-showcase,
 table.image-showcase th,
