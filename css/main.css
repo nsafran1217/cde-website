@@ -107,17 +107,20 @@ table.image-showcase td {
 }
 table.image-showcase td {
     width: 25%; /* Ensure each column takes up an equal portion of the table */
-    padding: 1px;
-    vertical-align: bottom;
+    padding: 5px;
+    vertical-align: middle;
+    ;
 }
 table.image-showcase div.image-showcase{
-    vertical-align: bottom;
+    vertical-align: middle;
     text-align: center;
 }
 table.image-showcase img {
     max-width: 100%; /* Ensure the image takes up the full width of its parent */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Remove any inline spacing */
+    image-rendering: auto;
+    
 
 }
 /* navigation bar */
