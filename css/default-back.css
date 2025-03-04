@@ -1,7 +1,7 @@
 /*Set images for default CDE theme*/
 
 body {
-    background: url(/img/default-css/toronto.png) left top repeat;
+    background: url(/img/bgs/toronto.png) left top repeat;
 }
 
 /*Mainly setups up the terminal background*/
