@@ -5,7 +5,7 @@
         <section>
             <window-title>hpterm - HP 715/100</window-title>
                 <content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 01-May-2025</span>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>HP 715/100</h2>
                 <p>The case design of the 700 series workstations is pretty basic, but it does have an industrial charm that I can appreciate. Some of the later Visualize systems, such as the C360, have a much more appealing design.</p>
                 <p>I have HP-UX 10.20 installed on the system, along with some open-source software from the HP-UX Porting Archive. Since many packages for 10.20 were erased, I had to find them on archive.org. I scraped all the copies and versions of the HP-UX Porting Archive, including mirrors, from archive.org and combined them into one directory tree. Eventually, I'll host this mirror somewhere.</p>

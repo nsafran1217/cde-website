@@ -5,7 +5,7 @@
         <section>
             <window-title>hpterm - C8000</window-title>
                 <content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 01-May-2025</span>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>C8000</h2>
                 <p>The C8000 was HP's last PA-RISC workstation. All later PA-RISC systems lacked graphical consoles. 
                 This system features a single PA-8900 1.1 GHz dual-core processor.
