@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - SPARCStation5</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>SPARCStation 5</h2>
             <p>This is another pizza box workstation, equipped with 32MB of RAM and a ~60MHz MicroSPARC
                 processor. Unfortunately, the memory in this system is proprietary and relatively rare,

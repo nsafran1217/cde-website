@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Nixie Weather Clock</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h1>Nixie and VFD Weather Clock</h1>
             <p>
             This project is mostly finished. I still want to modify some of the animations I created

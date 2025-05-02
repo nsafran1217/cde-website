@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Z80 UART</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Z80 UART Serial Board</h2>
             <p>
             This is the second board I made in 2017. I've made some changes to it in 2020 when I

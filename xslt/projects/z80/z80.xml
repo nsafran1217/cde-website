@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Z80 Computer</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Custom Z80 Computer</h2>
             <p>
             I started building this computer in late 2017, starting with the CPU/memory board and

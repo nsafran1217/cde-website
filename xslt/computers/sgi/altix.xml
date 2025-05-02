@@ -5,6 +5,7 @@
         <section>
             <window-title>winterm - SGI Altix 3700 and Altix 350</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>SGI Altix 3700 and Altix 350</h2>
                 <p>I recently acquired both of these systems, just before they were nearly scrapped. 
                 While I was able to save the NUMAlink cables and the systems themselves, the racks were unfortunately already gone.

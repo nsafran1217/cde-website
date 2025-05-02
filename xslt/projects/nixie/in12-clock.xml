@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - ИН-12 Nixie Clock</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>ИН-12 Nixie Tube Clock</h2>
                 <p>
                     <a href="https://github.com/nsafran1217/arduino-nixie-clock" target="_blank"

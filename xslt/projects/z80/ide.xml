@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Z80 IDE</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Z80 IDE Interface Board</h2>
             <p>
             Currently this board is very simple because only the IDE part is implemented.

@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Sun Microsystems</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Sun Microsystems</h2>
             <img src="/img/sun/sun.png" height="120px" class="fullwidth"></img>
             <p>Sun Microsystems was my first exposure to Unix workstations. Back in 2017, I posted a

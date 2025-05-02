@@ -5,6 +5,7 @@
         <section>
             <window-title>DECterm - AlphaServer 1000</window-title>
                 <content>
+                <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                     <h2>AlphaServer 1000</h2>
                     <img src="/img/dec/alpha-badge.jpg" alt="AlphaServer 1000" class="fullwidth"></img>
                     <p>I received this machine for free because it had a faulty power supply. After

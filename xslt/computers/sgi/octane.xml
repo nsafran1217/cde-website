@@ -5,6 +5,7 @@
         <section>
             <window-title>winterm - Octane</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>Octane</h2>
                 <p>The Octane was SGI's successor to the Indigo2, offering impressive graphics capabilities
                     and a modular design. It supports dual CPUs and various expansion cards through its

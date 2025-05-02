@@ -5,7 +5,7 @@
         <section>
             <window-title>Terminal - NeXT</window-title>
                 <content>
-
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 01-May-2025</span>
             <h2>NeXT</h2>
                 <p>
                 Haven't had much time to look at it yet. I need to find a solution for the soundbox interface.

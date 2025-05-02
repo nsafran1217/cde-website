@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Soyuz 744H</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>Soyuz Clock 744H Replica</h2>
                 <p> GitHub Link: 
                 <a href="https://github.com/nsafran1217/SoyuzClock">https://github.com/nsafran1217/SoyuzClock</a>

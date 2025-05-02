@@ -5,7 +5,7 @@
         <section>
             <window-title>Terminal - INS-1 Matrix</window-title>
                 <content>
-
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 01-May-2025</span>
             <h2>INS-1 Nixie Tube Matrix</h2>
                 <p>
                 Code and board design files: <a href="https://github.com/nsafran1217/INS-1_Matrix">GitHub Repository</a>

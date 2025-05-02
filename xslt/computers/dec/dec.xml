@@ -5,6 +5,7 @@
         <section>
             <window-title>DECterm - Digital Equipment Corporation</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>Digital Equipment Corporation</h2>
                 <img src="/img/dec/dec-logo.png" alt="DEC Logo" class="inline" width="200px"></img>
                 <p>Digital Equipment Corporation (DEC) fascinates me because of its significant impact on

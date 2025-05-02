@@ -5,6 +5,7 @@
         <section>
             <window-title>winterm - Silicon Graphic</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Silicon Graphics</h2>
             <p>Silicon Graphics workstations are legendary among Unix workstations, mostly for their
                 impressive graphics hardware, and their unique case designs.</p>

@@ -5,7 +5,7 @@
         <section>
             <window-title>dtterm - IBM</window-title>
                 <content>
-
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>IBM</h2>
                 <p>
                 Haven't had time to document much. I have AIX 4.3.2 on the 43p and have had some fun looking at AIX.

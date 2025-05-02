@@ -5,7 +5,7 @@
         <section>
             <window-title>Terminal - Z80 PIO</window-title>
             <content>
-
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Z80 PIO Board</h2>
             <p>
             I wanted to try out wire wrap, but I didn't have enough space on the back of the board,

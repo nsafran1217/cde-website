@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - ИВ-17 VFD Board</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>ИВ-17 Tube Board</h2>
             <p>
             <a href="https://github.com/nsafran1217/VFD-IV-17" target="_blank" rel="noopener noreferrer">https://github.com/nsafran1217/VFD-IV-17</a>

@@ -5,7 +5,7 @@
         <section>
             <window-title>Terminal - Z90 Clock</window-title>
             <content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: %%UPDATEDATE%%</span>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Z80 Clock Board</h2>
             <p>This board just controls the clock and reset signal for the computer. I do not have a
                 reset circuit when the computer is turned on, so the computer needs to be manually

@@ -5,6 +5,7 @@
         <section>
             <window-title>Terminal - Z80 CPU</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
             <h2>Z80 CPU and Memory Board</h2>
             <p>
             This was the first board I built for the computer. I'm not happy with how it looks, but

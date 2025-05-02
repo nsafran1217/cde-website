@@ -5,6 +5,7 @@
         <section>
             <window-title>DECterm - VT240</window-title>
             <content>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>VT 240</h2>
                 <img src="/img/dec/vt240.jpg" alt="VT 240" class="inline" width="300px"></img>
                 <p>The VT240 is a graphics terminal made by DEC. It supports ReGIS vector graphics and
