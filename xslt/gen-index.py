@@ -36,18 +36,18 @@ for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
                             date_str = match.group(1)
                             published_date = datetime.strptime(date_str, "%d-%b-%Y")
                             break
-
+                blogtitle = xml_root.find(".//title").text.replace("nsafran.com - ", "")
                 if published_date:
-                    # Extract the first 300 characters of <content>, ignoring <h2> and <span>
+                    # Extract the first <p> tag content inside <content>
                     content_element = xml_root.find(".//content")
                     if content_element is not None:
-                        content = ET.tostring(content_element, encoding="unicode", method="text")
-                        content = re.sub(r"<(h2|span)[^>]*>.*?</\1>", "", content, flags=re.DOTALL)  # Remove <h2> and <span>
-                        content = re.sub(r"<[^>]+>", "", content)  # Strip all HTML tags
-                        content_snippet = content[:300].strip()
+                        first_p = content_element.find(".//p")
+                        if first_p is not None and first_p.text:
+                            # Include text content and strip HTML tags
+                            content_snippet = ''.join(ET.tostring(first_p, encoding='unicode', method='text')).strip()[:300]
 
-                        # Add to the list of blog entries
-                        blog_entries.append((published_date, file_path, content_snippet))
+                            # Add to the list of blog entries
+                            blog_entries.append((published_date, file_path, content_snippet, blogtitle))
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
@@ -59,10 +59,11 @@ spotlight_path = "blogspotlight.xml"
 with open(spotlight_path, "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<blogspotlight>\n    <content>\n')
     f.write('    <h2>Recent Blog Articles</h2>\n')
-    for date, file_path, snippet in blog_entries:
-        title = os.path.splitext(os.path.basename(file_path))[0].replace("nsafran.com - ", "")
-        f.write(f'        <p><span style="font-style: bold;">{title}</span> - Published: {date.strftime("%d-%b-%Y")}</p>')
-        f.write(f'        <p>{snippet}...</p>\n')
+    for date, file_path, snippet, blogtitle in blog_entries:
+        filename = os.path.splitext(os.path.basename(file_path))[0]
+        
+        f.write(f'        <hr></hr><p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
+        f.write(f'        {snippet}...</p>\n')
     f.write('    </content>\n</blogspotlight>\n')
 
 print("blogspotlight.xml generated successfully.")
