@@ -39,7 +39,9 @@ body {
 
 }
 
-
+.cde-menu ul li.hp-nested {
+    display: block;
+}
 
 div.navbar {
     /*order is important*/

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="hp">
+    <title>nsafran.com - HP</title>
+    <sections>
+        <section>
+            <window-title>hpterm - HP</window-title>
+            <content>
+                <h2>Hewlett-Packard</h2>
+                <img src="/img/hp/hp-logo.jpg" alt="HP Logo" class="inline" width="200px"></img>
+                <p>
+                I currently have four HP-UX machines. HP and HP-UX feel very "business-like" when
+                    interacting with them, similar to how IBM machines feel.<br></br>
+                    HP-UX's system administration tool, SAM, is well-designed and feels complete. In later
+                    versions of HP-UX, they transitioned from Motif GUI applications to a web-based
+                    management tool called SMH, which has a similar look and feel to iLO interfaces. I
+                    haven't spent much time with the later HP-UX versions yet, but I plan to experiment with
+                    HP 9000 containers and Integrity VM.
+                </p>
+                <p>Of course, I'll also keep an OpenVMS 8.4 installation on my Integrity machine. One day, I
+                    hope to build a VMS cluster with x86-64, Itanium, Alpha, and VAX (if it's supported).
+                </p>
+            </content>
+        </section>
+        <section>
+            <window-title>hpterm - Systems</window-title>
+            <content>
+                <h2>Featured Systems:</h2>
+                <p>Systems which I have more to say about</p>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/computers/hp/715.html">
+                                        <img src="/img/hp/715.jpg" height="100px" alt="715/100"></img>
+                                        </a>
+                                        <a href="/computers/hp/715.html">715/100</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/computers/hp/c8000.html">
+                                        <img src="/img/hp/c8000.jpg" height="100px" alt="C8000"></img>
+                                        </a>
+                                        <a href="/computers/hp/c8000.html">C8000</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/computers/hp/rx2660.html">
+                                        <img src="/img/hp/rx2660.jpg" height="100px" alt="rx2660"></img>
+                                        </a>
+                                        <a href="/computers/hp/rx2660.html">rx2660</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/computers/hp/rp3440.html">
+                                        <img src="/img/hp/rp3440.jpg" height="100px" alt="rp3440"></img>
+                                        </a>
+                                        <a href="/computers/hp/rp3440.html">rp3440</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>All Systems:</h2>
+                Will update eventually with all specs
+                    <table class="specs">
+                        <tbody>
+                            <tr>
+                                <th>Model</th>
+                                <th>Processor</th>
+                                <th>RAM</th>
+                                <th>Graphics</th>
+                                <th>Disk</th>
+                                <th>OS</th>
+                                <th>Notes</th>
+                            </tr>
+                            <tr>
+                                <td>HP 9000 715/100</td>
+                                <td>??</td>
+                                <td>??</td>
+                                <td>?</td>
+                                <td>4.2 GB</td>
+                                <td>HP-UX 10.20</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>C8000</td>
+                                <td>PA-8900</td>
+                                <td>48 MB</td>
+                                <td>ATi FireGL</td>
+                                <td>36 GB</td>
+                                <td>HP-UX 11.11 (11i v1)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>HP 9000 rp3440</td>
+                                <td>2x PA-8900</td>
+                                <td>2 GB</td>
+                                <td>None</td>
+                                <td>36 GB</td>
+                                <td>HP-UX 11.31</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Integrity rx2660</td>
+                                <td>Itanium2</td>
+                                <td>4 GB</td>
+                                <td>Integrated</td>
+                                <td>300 GB SAS</td>
+                                <td>HP-UX 11.31 / OpenVMS 8.4</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </content>
+            </section>
+        </sections>
+    </page>

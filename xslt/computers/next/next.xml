@@ -4,8 +4,9 @@
     <sections>
         <section>
             <window-title>Terminal - NeXT</window-title>
-            <header>NeXT</header>
-            <content>
+                <content>
+
+            <h2>NeXT</h2>
                 <p>
                 Haven't had much time to look at it yet. I need to find a solution for the soundbox interface.
                 </p>
@@ -13,8 +14,9 @@
         </section>
         <section>
             <window-title>Terminal - Systems</window-title>
-            <header>NeXT</header>
-            <content>
+                <content>
+
+            <h2>NeXT</h2>
                 <h2>Featured Systems:</h2>
                 <p>Systems which I have more to say about</p>
                 <table class="image-showcase">

@@ -4,8 +4,9 @@
     <sections>
         <section>
             <window-title>dtterm - IBM</window-title>
-            <header>IBM</header>
-            <content>
+                <content>
+
+            <h2>IBM</h2>
                 <p>
                 Haven't had time to document much. I have AIX 4.3.2 on the 43p and have ad some fun looking at AIX.
                 </p>
@@ -13,8 +14,9 @@
         </section>
         <section>
             <window-title>dtterm - Systems</window-title>
-            <header>IBM</header>
-            <content>
+                <content>
+
+            <h2>IBM</h2>
                 <h2>Featured Systems:</h2>
                 <p>Systems which I have more to say about</p>
                 <table class="image-showcase">

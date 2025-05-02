@@ -4,8 +4,9 @@
     <sections>
         <section>
             <window-title>Terminal - INS-1 Matrix</window-title>
-            <header>INS-1 Nixie Tube Matrix</header>
-            <content>
+                <content>
+
+            <h2>INS-1 Nixie Tube Matrix</h2>
                 <p>
                 Code and board design files: <a href="https://github.com/nsafran1217/INS-1_Matrix">GitHub Repository</a>
                 </p>
@@ -86,8 +87,9 @@
         </section>
         <section>
             <window-title>Terminal - Pictures</window-title>
-            <header>Pictures</header>
-            <content>
+                <content>
+
+            <h2>Pictures</h2>
                 <table class="image-showcase">
                     <tbody>
                         <tr>

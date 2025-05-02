@@ -4,8 +4,9 @@
     <sections>
         <section>
             <window-title>Terminal - Template</window-title>
-            <header>Template</header>
-            <content>
+                <content>
+
+            <h2>Template</h2>
                 <p>
                 Template
                 </p>

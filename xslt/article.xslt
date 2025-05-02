@@ -40,7 +40,6 @@
                                     <div class="main-body-container">
                                         <div class="window-title"><xsl:value-of select="window-title"/></div>
                                         <div class="main-body">
-                                            <h2><xsl:value-of select="header"/></h2>
                                             <xsl:copy-of select="content"/>
                                         </div>
                                     </div>
