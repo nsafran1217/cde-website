@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<page theme="dec">
+<page theme="ibm">
     <title>nsafran.com - IBM</title>
     <sections>
         <section>
@@ -8,7 +8,7 @@
 
             <h2>IBM</h2>
                 <p>
-                Haven't had time to document much. I have AIX 4.3.2 on the 43p and have ad some fun looking at AIX.
+                Haven't had time to document much. I have AIX 4.3.2 on the 43p and have had some fun looking at AIX.
                 </p>
             </content>
         </section>

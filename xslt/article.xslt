@@ -21,6 +21,9 @@
                 <xsl:if test="@theme='sun'">
                     <link rel="stylesheet" href="/css/sun-back.css"/>
                 </xsl:if>
+                <xsl:if test="@theme='ibm'">
+                <link rel="stylesheet" href="/css/ibm-back.css"/>
+                </xsl:if>
                 <xsl:if test="style">
                     <style><xsl:value-of select="style"/></style>
                 </xsl:if>
