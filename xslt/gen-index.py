@@ -62,8 +62,10 @@ with open(spotlight_path, "w", encoding="utf-8") as f:
     for date, file_path, snippet, blogtitle in blog_entries:
         filename = os.path.splitext(os.path.basename(file_path))[0]
         
-        f.write(f'        <hr></hr><p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
+        f.write(f'        <hr></hr>\n<p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
         f.write(f'        {snippet}...</p>\n')
+    f.write('    <hr></hr>\n')
+    f.write('    <a href="/blog/index.html"><h3>All blog articles</h3></a>\n')
     f.write('    </content>\n</blogspotlight>\n')
 
 print("blogspotlight.xml generated successfully.")

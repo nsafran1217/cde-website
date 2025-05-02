@@ -7,10 +7,10 @@
             <content>
             <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
                 <h2>SGI Altix 3700 and Altix 350</h2>
-                <p>I recently acquired both of these systems, just before they were nearly scrapped. 
+                <p>I recently acquired both of these systems, just before they were scrapped. 
                 While I was able to save the NUMAlink cables and the systems themselves, the racks were unfortunately already gone.
-                 Along with them, there was a UV1000 and an Altix 4700, but their racks and blade chassis had also been scrapped--only the blades remained.
-                 The L2 controllers were gone as well.
+                Along with them, there was a UV1000 and an Altix 4700, but their racks and blade chassis had also been scrapped--only the blades remained.
+                The L2 controllers were gone as well.
                 <p>I haven't had much time to go through everything yet, but the 3700 appears to be working correctly. 
                 The 350, however, has a few bricks that didn't power up, and I still need to investigate the issue.</p>
                 </p>
