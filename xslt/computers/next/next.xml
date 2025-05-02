@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - NeXT</title>
+    <sections>
+        <section>
+            <window-title>Terminal - NeXT</window-title>
+            <header>NeXT</header>
+            <content>
+                <p>
+                Haven't had much time to look at it yet. I need to find a solution for the soundbox interface.
+                </p>
+            </content>
+        </section>
+        <section>
+            <window-title>Terminal - Systems</window-title>
+            <header>NeXT</header>
+            <content>
+                <h2>Featured Systems:</h2>
+                <p>Systems which I have more to say about</p>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <!--<a href="/computers/NeXT/nextstation.html">-->
+                                    <img src="/img/NeXT/nextstation.jpg" height="100px" alt="NeXTstation"></img>
+                                    <!--</a>-->
+                                    <!--<a href="/computers/NeXT/nextstation.html">43p</a>-->
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>All Systems:</h2>
+                        Will update eventually with all specs
+                <table class="specs">
+                    <tbody>
+                        <tr>
+                            <th>Model</th>
+                            <th>Processor</th>
+                            <th>RAM</th>
+                            <th>Graphics</th>
+                            <th>Disk</th>
+                            <th>OS</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>NeXTstation Turbo</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>?</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </content>
+        </section>
+    </sections>
+</page>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="dec">
+    <title>nsafran.com - IBM</title>
+    <sections>
+        <section>
+            <window-title>dtterm - IBM</window-title>
+            <header>IBM</header>
+            <content>
+                <p>
+                Haven't had time to document much. I have AIX 4.3.2 on the 43p and have ad some fun looking at AIX.
+                </p>
+            </content>
+        </section>
+        <section>
+            <window-title>dtterm - Systems</window-title>
+            <header>IBM</header>
+            <content>
+                <h2>Featured Systems:</h2>
+                <p>Systems which I have more to say about</p>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <!--<a href="/computers/IBM/43p.html">-->
+                                        <img src="/img/IBM/43p.jpg" height="100px" alt="43p"></img>
+                                    <!--</a>-->
+                                    <!--<a href="/computers/IBM/43p.html">43p</a>-->
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <!--<a href="/computers/IBM/p740.html">-->
+                                        <img src="/img/IBM/p740.jpg" height="100px" alt="p740"></img>
+                                    <!--</a>-->
+                                    <!--<a href="/computers/IBM/p740.html">P740</a>-->
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>All Systems:</h2>
+                Will update eventually with all specs
+                <table class="specs">
+                    <tbody>
+                        <tr>
+                            <th>Model</th>
+                            <th>Processor</th>
+                            <th>RAM</th>
+                            <th>Graphics</th>
+                            <th>Disk</th>
+                            <th>OS</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>RS/6000 43p</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>?</td>
+                            <td>9.1 GB</td>
+                            <td>AIX 4.3.2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Power 740</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>None</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </content>
+        </section>
+    </sections>
+</page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - Template</title>
+    <sections>
+        <section>
+            <window-title>Terminal - Template</window-title>
+            <header>Template</header>
+            <content>
+                <p>
+                Template
+                </p>
+            </content>
+        </section>
+    </sections>
+</page>

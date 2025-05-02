@@ -50,6 +50,7 @@ table.specs td {
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
+    color: white;
 }
 /*title at top of a window*/
 .window-title {
