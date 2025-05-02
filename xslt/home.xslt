@@ -3,28 +3,9 @@
     <xsl:template match="/page">
         <html>
             <head>
-                <title><xsl:value-of select="title"/></title>
-                
+                <title><xsl:value-of select="title"/></title>      
                 <link rel="stylesheet" href="/css/main.css"/>
-                <xsl:if test="@theme='default'">
-                    <link rel="stylesheet" href="/css/default-back.css"/>
-                </xsl:if>
-                <xsl:if test="@theme='dec'">
-                    <link rel="stylesheet" href="/css/dec-back.css"/>
-                </xsl:if>
-                <xsl:if test="@theme='hp'">
-                    <link rel="stylesheet" href="/css/hp-back.css"/>
-                </xsl:if>
-                <xsl:if test="@theme='sgi'">
-                    <link rel="stylesheet" href="/css/sgi-back.css"/>
-                </xsl:if>
-                <xsl:if test="@theme='sun'">
-                    <link rel="stylesheet" href="/css/sun-back.css"/>
-                </xsl:if>
-                <xsl:if test="style">
-                    <style><xsl:value-of select="style"/></style>
-                </xsl:if>
-
+                <link rel="stylesheet" href="/css/default-back.css"/>
             </head>
             <body>
                 <table>
@@ -40,17 +21,26 @@
                                     <div class="main-body-container">
                                         <div class="window-title"><xsl:value-of select="window-title"/></div>
                                         <div class="main-body">
-                                            <h2><xsl:value-of select="header"/></h2>
                                             <xsl:copy-of select="content"/>
                                         </div>
                                     </div>
                                 </xsl:for-each>
+                                <xsl:apply-templates select="document('./blogspotlight.xml')/blogspotlight"/>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="blogspotlight">           
+        <div class="main-body-container">
+            <div class="window-title">Teminal - Recent Blog Articles</div>
+            <div class="main-body">
+                <xsl:copy-of select="content"/>
+            </div>
+        </div>
     </xsl:template>
     
     <xsl:template match="navigation">
