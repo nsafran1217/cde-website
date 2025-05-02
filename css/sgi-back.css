@@ -26,6 +26,11 @@ body {
         background-color: #00003f;
 
 }
+/* custom for winterm */
+.main-body {
+    margin-top: 20px;
+    /* space down for terminal png*/
+}
 .window-title {
     position: absolute;
     top: 4px;
