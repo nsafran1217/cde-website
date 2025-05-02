@@ -15,6 +15,9 @@ body {
     background-color: #252c3f;
     height: 100%;
 }
+.cde-menu ul li.hp-nested {
+    display: block;
+}
 
 .window-title {
     position: absolute;
@@ -37,10 +40,6 @@ body {
     background-color: #78a0d4;
         
 
-}
-
-.cde-menu ul li.hp-nested {
-    display: block;
 }
 
 div.navbar {

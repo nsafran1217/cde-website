@@ -3,6 +3,9 @@
 body {
     background: url(/img/bgs/scatter.png) left top repeat;
 }
+.cde-menu ul li.sgi-nested {
+    display: block;
+}
 
 /*Mainly setups up the terminal background*/
 .main-body-container {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="sgi">
+    <title>nsafran.com - Indy</title>
+    <sections>
+        <section>
+            <window-title>winterm - Indy</window-title>
+            <content>
+            <h2>Indy</h2>
+            <p>The Indy is my favorite Silicon Graphics machine, just for the case design. 
+            I love the color, the speckled finish, and how the case looks like its fractured horizontally.</p>
+            <p>The Indy is well known for being underpowered, an "Indigo without the go". 
+            I agree with that sentiment after using it when compared to my Indigo2.</p>
+            <p>I have 2 Indy's, both very similarly specced. One has a 80 pin SCSI disk with an adapter, and the other has a BlueSCSI v2. 
+            I never got the BlueSCSI working perfectly in this system, but I'm sure I just need to change a few settings.
+            Both have Irix 6.5.22 installed, which probably is a little much for these computers. 
+            I should downgrade to an earlier release of 6.5, or even 5.3 on one of them. 
+            6.5.22 is the latest version of Irix that will run on the Indy and other IP22 architecture machines.</p>
+            <p>Overall Irix is a very nice Unix, and the 4Dwm window manager feels very snappy, even on the underpowered hardware.</p>
+            <img src="/img/sgi/indy.jpg" alt="Indy" class="fullwidth"></img>
+            </content>
+        </section>
+    </sections>
+</page>

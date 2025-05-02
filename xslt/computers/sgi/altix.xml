@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="sgi">
+    <title>nsafran.com - SGI Altix 3700 and Altix 350</title>
+    <sections>
+        <section>
+            <window-title>winterm - SGI Altix 3700 and Altix 350</window-title>
+            <content>
+                <h2>SGI Altix 3700 and Altix 350</h2>
+                <p>I recently acquired both of these systems, just before they were nearly scrapped. 
+                While I was able to save the NUMAlink cables and the systems themselves, the racks were unfortunately already gone.
+                 Along with them, there was a UV1000 and an Altix 4700, but their racks and blade chassis had also been scrapped--only the blades remained.
+                 The L2 controllers were gone as well.
+                <p>I haven't had much time to go through everything yet, but the 3700 appears to be working correctly. 
+                The 350, however, has a few bricks that didn't power up, and I still need to investigate the issue.</p>
+                </p>
+            </content>
+        </section>
+        <section>
+            <window-title>winterm - Pictures</window-title>
+            <content>
+            <h2>Pictures</h2>
+                <table class="image-showcase">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/sgi/altix3700.jpg"><img src="/img/sgi/altix3700.jpg" alt="3700"></img></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/sgi/altix3700-rear.jpg"><img src="/img/sgi/altix3700-rear.jpg" alt="3700 rear"></img></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="image-showcase">
+                                    <a href="/img/sgi/altix350.jpg"><img src="/img/sgi/altix350.jpg" alt="350 "></img></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </content>
+        </section>
+    </sections>
+</page>

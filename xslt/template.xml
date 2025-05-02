@@ -4,12 +4,11 @@
     <sections>
         <section>
             <window-title>Terminal - Template</window-title>
-                <content>
-
+            <content>
             <h2>Template</h2>
-                <p>
-                Template
-                </p>
+            <p>
+            Template
+            </p>
             </content>
         </section>
     </sections>
