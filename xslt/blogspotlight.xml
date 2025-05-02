@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blogspotlight>
     <content>
-    <h2>Template</h2>
-    <p>
-    Template
-    </p>
+    <h2>Recent Blog Articles</h2>
+        <p><span style="font-style: bold;">altix-linux</span> - Published: 02-May-2025</p>        <p>Published: 02-May-2025 - Last Updated: 
+            Modern Linux on SGI Altix
+            
+            Modern Linux on SGI Altix...</p>
+        <p><span style="font-style: bold;">bacula</span> - Published: 01-May-2025</p>        <p>Published: 01-May-2025 - Last Updated: 
+            Bacula Backup Setup
+            
+            Loren ipusm dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </content>
 </blogspotlight>
