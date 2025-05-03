@@ -54,8 +54,10 @@ for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
 print("Generating blog/index.xml")
 ####################### 
 # write blog/index.html, all blog entries
+# get the blogs
 blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)
 
+#open the file and write out the full xml file, loop through all blog entires and insert into the xml
 with open("blog/index.xml", "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<page theme="default">\n<title>nsafran.com - All Blog Entires</title>\n')
     f.write('<sections><section><window-title>Terminal - All Blog Entries</window-title>\n<content>\n')
@@ -75,6 +77,7 @@ print("Generating blogspotlight.xml")
 blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)[:5]
 ##########
 # Write the blogspotlight.xml file
+#open the file and write out the full xml file, loop through all blog entires and insert the 5 into the xml
 spotlight_path = "blogspotlight.xml"
 with open(spotlight_path, "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<blogspotlight>\n    <content>\n')
