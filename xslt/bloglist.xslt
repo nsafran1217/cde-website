@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/page">
+    <xsl:template match="/bloglist">
         <html>
             <head>
                 <title><xsl:value-of select="title"/></title>               
@@ -16,15 +16,15 @@
                                     <xsl:apply-templates select="document('./shared/nav.xml')/navigation"/>
                                 </div>
                             </td>
-                            <td>
-                                <xsl:for-each select="sections/section">
-                                    <div class="main-body-container">
-                                        <div class="window-title"><xsl:value-of select="window-title"/></div>
-                                        <div class="main-body">
+                            <td>        
+                                <div class="main-body-container">
+                                    <div class="window-title">Teminal - All Blog Entries</div>
+                                    <div class="main-body">
+
                                             <xsl:copy-of select="content"/>
-                                        </div>
+
                                     </div>
-                                </xsl:for-each>
+                                </div>
                             </td>
                         </tr>
                     </tbody>

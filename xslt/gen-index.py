@@ -10,8 +10,8 @@ output_base_dir = "../"
 
 ##################################################
 # New functionality: Generate blogspotlight.xml
-print("Generating blogspotlight.xml")
 
+print("Getting all blog entries")
 # List to store blog entries with their published dates
 blog_entries = []
 
@@ -19,7 +19,7 @@ blog_entries = []
 blog_dir = "blog"
 for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
     for file in files:
-        if file.endswith(".xml"):
+        if file.endswith(".xml") and file != "index.xml":  # Skip index.xml
             file_path = os.path.join(root_dir, file)
             try:
                 # Parse the XML file
@@ -51,6 +51,26 @@ for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
+print("Generating blog/index.xml")
+####################### 
+# write blog/index.html, all blog entries
+blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)
+
+with open("blog/index.xml", "w", encoding="utf-8") as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<page theme="default">\n<title>nsafran.com - All Blog Entires</title>\n')
+    f.write('<sections><section><window-title>Terminal - All Blog Entries</window-title>\n<content>\n')
+    f.write('    <h2>All Blog Entries by Date</h2>\n')
+    for date, file_path, snippet, blogtitle in blog_entries:
+        filename = os.path.splitext(os.path.basename(file_path))[0]
+        
+        f.write(f'    <hr></hr>\n<p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
+        f.write(f'    {snippet}...</p>\n')
+    f.write('    <hr></hr>\n')
+    f.write('</content></section></sections></page>')
+
+
+print("blog/index.xml generated successfully.")
+print("Generating blogspotlight.xml")
 # Sort the blog entries by date (most recent first) and take the top 5
 blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)[:5]
 ##########
