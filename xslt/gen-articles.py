@@ -61,5 +61,5 @@ for input_dir in input_dirs:
                 print(f"Processing {input_file} to {output_file}")
                 # Run xsltproc
                 #subprocess.run(["xsltproc", "article.xslt", input_file, "-o", output_file], check=True)
-                subprocess.run(['xsltproc', '-o', output_file, 'infopage.xslt', input_file], check=True)
+                subprocess.run(['xsltproc', '-o', output_file, 'article.xslt', input_file], check=True)
 
