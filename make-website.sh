@@ -1,22 +1,23 @@
 #!/bin/bash
 
 set -e
-mkdir -p output
+mkdir -p OUTPUT
 cd xslt
 python gen-articles.py
 python gen-index.py
 cd ..
 python gen-sitemap.py
 
-echo "Copying to ./output/"
+echo "Copying to ./OUTPUT/"
 
-cp -a blog output/
-cp -a css output/
-cp -a img output/
-cp -a computers output/
-cp -a projects output/
-cp -a index.html output/
-cp -a robots.txt output/
-cp -a sitemap.xml output/
+cp -a blog OUTPUT/
+cp -a css OUTPUT/
+cp -a img OUTPUT/
+cp -a computers OUTPUT/
+cp -a projects OUTPUT/
+cp index.html OUTPUT/
+cp robots.txt OUTPUT/
+cp sitemap.xml OUTPUT/
+cp CNAME OUTPUT/
 
 echo "DONE"
