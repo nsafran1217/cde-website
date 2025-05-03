@@ -6,7 +6,7 @@ from xml.etree import ElementTree as ET
 
 # Define the directories
 input_dirs = ["projects", "computers", "blog"]
-output_base_dir = "../"
+output_base_dir = "../OUTPUT/"
 
 ##################################################
 # New functionality: Generate blogspotlight.xml

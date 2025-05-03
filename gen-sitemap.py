@@ -8,14 +8,14 @@ BASE_URL = "https://nsafran.com"
 EXCLUDE_FOLDER = "xslt"
 
 # Define the output file
-OUTPUT_FILE = "sitemap.xml"
+OUTPUT_FILE = "./OUTPUT/sitemap.xml"
 
 def generate_sitemap():
     # List to store sitemap entries
     sitemap_entries = []
 
     # Walk through the root folder and subfolders
-    for root, _, files in os.walk("."):
+    for root, _, files in os.walk("./OUTPUT"):
         # Skip the excluded folder
         if EXCLUDE_FOLDER in root:
             continue

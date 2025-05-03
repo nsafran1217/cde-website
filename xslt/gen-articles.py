@@ -6,7 +6,7 @@ from xml.etree import ElementTree as ET
 
 # Define the directories
 input_dirs = ["projects", "computers", "blog"]
-output_base_dir = "../"
+output_base_dir = "../OUTPUT/"
 
 # Ensure the output base directory exists
 # os.makedirs(output_base_dir, exist_ok=True)
