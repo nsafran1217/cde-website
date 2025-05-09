@@ -5,11 +5,8 @@
         <section>
             <window-title>Terminal - This Website's Design</window-title>
             <content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <span style="text-align: right; font-style: italic; display: block;">Published: 02-May-2025 - Last Updated: 02-May-2025</span>
             <h2>This Website's Design</h2>
-            <p>
-            <a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a>
-            </p>
             <p>
             When I originally made a website, I used Publii, which is a WSYIWYG static site generator. Publii worked good, but I wanted a bit more control over the layout and organizaiton of the site.</p>
             <p>
@@ -23,6 +20,9 @@
             I also wanted the site to be static, so I can host it for free on GitHub Pages. I also wanted no JavaScript, so older computers would at least load the site, even if all the styling didn't work.
 
 
+            </p>
+            <p>
+            <a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a>
             </p>
             </content>
         </section>

@@ -5,7 +5,7 @@ import re
 from xml.etree import ElementTree as ET
 
 # Define the directories
-input_dirs = ["projects", "computers", "blog"]
+
 output_base_dir = "../OUTPUT/"
 
 ##################################################
@@ -15,11 +15,14 @@ print("Getting all blog entries")
 # List to store blog entries with their published dates
 blog_entries = []
 
+# If a blog is not being processed, check the first <p> has text and not just an HTML tag
 # Scan the blog folder for XML files
-blog_dir = "blog"
+blog_dir = "./blog"
 for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
+    print(f"Total blog entries found: {len(files)}")
     for file in files:
-        if file.endswith(".xml") and file != "index.xml":  # Skip index.xml
+        print(f"Processing {file}")
+        if file.endswith(".xml") and file != "index.xml" and file != "about.xml":  # Skip index.xml
             file_path = os.path.join(root_dir, file)
             try:
                 # Parse the XML file
@@ -55,6 +58,7 @@ print("Generating blog/index.xml")
 ####################### 
 # write blog/index.html, all blog entries
 # get the blogs
+print(f"Total blog entries found: {len(blog_entries)}")
 blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)
 
 #open the file and write out the full xml file, loop through all blog entires and insert into the xml
@@ -63,8 +67,8 @@ with open("blog/index.xml", "w", encoding="utf-8") as f:
     f.write('<sections><section><window-title>Terminal - All Blog Entries</window-title>\n<content>\n')
     f.write('    <h2>All Blog Entries by Date</h2>\n')
     for date, file_path, snippet, blogtitle in blog_entries:
+        print("Processing blog entry:", file_path)
         filename = os.path.splitext(os.path.basename(file_path))[0]
-        
         f.write(f'    <hr></hr>\n<p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
         f.write(f'    {snippet}...</p>\n')
     f.write('    <hr></hr>\n')
