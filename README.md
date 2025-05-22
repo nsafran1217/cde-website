@@ -12,4 +12,3 @@ I think I ended up making a very simple static site generator. xslt stylsheets a
 - add google search bar on page somewhere
 - finish blog articles
 - resize images so they take less space and the site loads faster. 115MB of images is kinda of overkill
-- 

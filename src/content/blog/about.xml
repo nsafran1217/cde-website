@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+    <title>nsafran.com - About me</title>
+    <sections>
+        <section>
+            <window-title>Terminal - About me</window-title>
+            <content>
+<h1>About me</h1>
+
+<p>I am interested in '90s and 2000s UNIX computers (as you can tell from the site design). <br />
+I also enjoy working on electronics projects. I mainly focus on digital electronics.</p>
+
+<p><a href="https://github.com/nsafran1217">My GitHub</a></p>
+            </content>
+        </section>
+    </sections>
+</page>
