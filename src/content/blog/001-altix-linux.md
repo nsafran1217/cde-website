@@ -1,11 +1,10 @@
 # Modern Linux on SGI Altix
-
-Published: 02-May-2025 - Last Updated: 02-May-2025
+*Published: 22-May-2025 - Last Updated: 23-May-2025*
 
 ---
 
 I recently purchased two SGI Altixes,  [an Altix 350 and Altix 3700.](/computers/sgi/altix.html)
-The IA64 Altix computers came with a RHEL based distro, then switched to SuSE Enterprise Linux Server (SLES). The latest officially supported is SLES 11, which I installed fine on both atlixes. 
+The IA64 Altix computers came with a RHEL based distro, then switched to SuSE Enterprise Linux Server (SLES). The latest officially supported is SLES 11, which I installed fine on both atlixes.  
 SLES works okay, but I've found that using it is difficult as there don't seem to be any archives of packages for it avaliable.
 
 I know others have gotten Debian to install on the Altix, but I was looking for a more modern OS. 

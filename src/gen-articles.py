@@ -6,7 +6,7 @@ from xml.etree import ElementTree as ET
 
 # Define the directories
 input_dirs = ["projects", "computers", "blog"]
-output_base_dir = "../OUTPUT/"
+output_base_dir = "../../OUTPUT/"
 
 # Ensure the output base directory exists
 # os.makedirs(output_base_dir, exist_ok=True)
@@ -30,5 +30,5 @@ for input_dir in input_dirs:
                 print(f"Processing {input_file} to {output_file}")
                 # Run xsltproc
                 #subprocess.run(["xsltproc", "article.xslt", input_file, "-o", output_file], check=True)
-                subprocess.run(['xsltproc', '-o', output_file, 'article.xslt', input_file], check=True)
+                subprocess.run(['xsltproc', '-o', output_file, '../templates/article.xslt', input_file], check=True)
 

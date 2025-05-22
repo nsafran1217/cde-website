@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page theme="default">
+<title>nsafran.com - All Blog Entires</title>
+<sections><section><window-title>Terminal - All Blog Entries</window-title>
+<content>
+    <h2>All Blog Entries by Date</h2>
+    <hr></hr>
+    <table>
+    <tr><td>Title</td><td>Date Published</td></tr>
+    
+<tr><td><a href="001-altix-linux.html">Modern Linux on SGI Altix</a></td><td>22-May-2025</td></tr>
+<tr><td><a href="000-this-website.html">This Website's Design</a></td><td>22-May-2025</td></tr>
+</table></content></section></sections></page>

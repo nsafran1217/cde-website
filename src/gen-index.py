@@ -6,7 +6,7 @@ from xml.etree import ElementTree as ET
 
 # Define the directories
 
-output_base_dir = "../OUTPUT/"
+output_base_dir = "../../OUTPUT/"
 
 ##################################################
 # New functionality: Generate blogspotlight.xml
@@ -54,26 +54,27 @@ for root_dir, _, files in os.walk(blog_dir):  # Renamed 'root' to 'root_dir'
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")
 
-print("Generating blog/index.xml")
-####################### 
-# write blog/index.html, all blog entries
-# get the blogs
-print(f"Total blog entries found: {len(blog_entries)}")
-blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)
-
-#open the file and write out the full xml file, loop through all blog entires and insert into the xml
-with open("blog/index.xml", "w", encoding="utf-8") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<page theme="default">\n<title>nsafran.com - All Blog Entires</title>\n')
-    f.write('<sections><section><window-title>Terminal - All Blog Entries</window-title>\n<content>\n')
-    f.write('    <h2>All Blog Entries by Date</h2>\n')
-    for date, file_path, snippet, blogtitle in blog_entries:
-        print("Processing blog entry:", file_path)
-        filename = os.path.splitext(os.path.basename(file_path))[0]
-        f.write(f'    <hr></hr>\n<p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
-        f.write(f'    {snippet}...</p>\n')
-    f.write('    <hr></hr>\n')
-    f.write('</content></section></sections></page>')
-
+# REMOVE to simplify. just gen a table of blog entries
+#print("Generating blog/index.xml")
+######################## 
+## write blog/index.html, all blog entries
+## get the blogs
+#print(f"Total blog entries found: {len(blog_entries)}")
+#blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)
+#
+##open the file and write out the full xml file, loop through all blog entires and insert into the xml
+#with open("blog/index.xml", "w", encoding="utf-8") as f:
+#    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<page theme="default">\n<title>nsafran.com - All Blog Entires</title>\n')
+#    f.write('<sections><section><window-title>Terminal - All Blog Entries</window-title>\n<content>\n')
+#    f.write('    <h2>All Blog Entries by Date</h2>\n')
+#    for date, file_path, snippet, blogtitle in blog_entries:
+#        print("Processing blog entry:", file_path)
+#        filename = os.path.splitext(os.path.basename(file_path))[0]
+#        f.write(f'    <hr></hr>\n<p><a href="/blog/{filename}.html"><span style="font-weight: bold;">{blogtitle}</span> - {date.strftime("%d-%b-%Y")}</a><br></br>\n')
+#        f.write(f'    {snippet}...</p>\n')
+#    f.write('    <hr></hr>\n')
+#    f.write('</content></section></sections></page>')
+#
 
 print("blog/index.xml generated successfully.")
 print("Generating blogspotlight.xml")
@@ -82,7 +83,7 @@ blog_entries = sorted(blog_entries, key=lambda x: x[0], reverse=True)[:5]
 ##########
 # Write the blogspotlight.xml file
 #open the file and write out the full xml file, loop through all blog entires and insert the 5 into the xml
-spotlight_path = "blogspotlight.xml"
+spotlight_path = "../templates/blogspotlight.xml"
 with open(spotlight_path, "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<blogspotlight>\n    <content>\n')
     f.write('    <h2>Recent Blog Articles</h2>\n')
@@ -110,5 +111,5 @@ output_file = os.path.join(output_dir, file.replace(".xml", ".html"))
 print(f"Processing {input_file} to {output_file}")
 # Run xsltproc
 #subprocess.run(["xsltproc", "article.xslt", input_file, "-o", output_file], check=True)
-subprocess.run(['xsltproc', '-o', output_file, 'home.xslt', input_file], check=True)
+subprocess.run(['xsltproc', '-o', output_file, '../templates/home.xslt', input_file], check=True)
 #############################################
