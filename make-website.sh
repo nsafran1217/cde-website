@@ -5,7 +5,7 @@ mkdir -p OUTPUT
 cd OUTPUT
 rm -rf blog
 rm -rf computer
-rm-rf projects
+rm -rf projects
 rm index.html
 rm sitemap.xml
 cd ..

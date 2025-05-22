@@ -1,6 +1,5 @@
 import os
 import subprocess
-from datetime import datetime
 import re
 from xml.etree import ElementTree as ET
 
@@ -29,6 +28,5 @@ for input_dir in input_dirs:
                 output_file = os.path.join(output_dir, file.replace(".xml", ".html"))
                 print(f"Processing {input_file} to {output_file}")
                 # Run xsltproc
-                #subprocess.run(["xsltproc", "article.xslt", input_file, "-o", output_file], check=True)
                 subprocess.run(['xsltproc', '-o', output_file, '../templates/article.xslt', input_file], check=True)
 
