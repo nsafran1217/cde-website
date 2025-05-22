@@ -3,3 +3,5 @@
 /OUTPUT/blog
 /OUTPUT/index.html
 /OUTPUT/sitemap.xml 
+/templates/blogspotlight.xml
+/blog/0*.xml
