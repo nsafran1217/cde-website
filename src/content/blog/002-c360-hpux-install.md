@@ -38,8 +38,9 @@ To Boot: `boot fwscsi.4.0`
 
 Tip for installing from ISOs:  
 I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my NFS export. Then, I can point `swinstall` at this location.  
-`$ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso`  
-`$ sudo mount --bind /mnt/iso /data/nfs/iso`
+
+    $ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso
+    $ sudo mount --bind /mnt/iso /data/nfs/iso
 
 ---
 # C compilers
@@ -54,6 +55,7 @@ You can download ansic from from osarchive.org:
 
 
 ## GCC
+I'll work on this later.
 
 ---
 # Software building
@@ -65,13 +67,29 @@ Lets try out the audio on this C360 and build mikmod and play some mod files. We
 libmikmod built wihtout issues.  
 mikmod is having issues with HP's curses. I'm going to try to build ncurses.
 
-* ncurses-6.5
+* ncurses-5.2
 
+Built with ./configure and installed into /usr/local
+
+mikmod: `./configure CPPFLAGS="-I/usr/local/include -I/usr/local/include/ncurses" LDFLAGS="-L/usr/local/lib"`  
+Then I get this error:  
+
+    usr/ccs/bin/ld: Unsatisfied symbols:
+        __getmaxy (code)
+        __getmaxx (code)
+
+Now, on line 162 in `src/mwindow.c`, we run into an issue since its assuming we have the broken HP-UX curses. Just change the name of the variable in `#if defined(__hpux)` to make it not define those macros.
+
+*And, success!*  We have sound output on the C360! Eventually, I want to figure out if a new mikmod works out of the box without changes.
+
+*I failed to make ncurses 6.5 work because the the test program for mikmod wont build with aCC. I need GCC for that to work I believe. Leave notes here for future work with GCC.*
+
+ncurses-6.5  
 Fetched from gnu and it built without any issues. Build non wide character support:  
 `./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec`
 
 
-
+---
 # Adding a second disk
 I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.
 
