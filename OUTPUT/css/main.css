@@ -12,12 +12,17 @@ table {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 2px;
+    border: 1px rgb(182, 182, 182) solid;
+    
 }
 td {
     vertical-align: top;
-    padding: 0px 10px
+    padding: 0px 10px;
+    border: 1px rgb(182, 182, 182) solid;
+    border-collapse: collapse;
+    color: white;
 }
 /*Mainly setups up the terminal background*/
 .main-body-container {
@@ -47,7 +52,6 @@ pre {
 table.specs,
 table.specs th,
 table.specs td {
-    border: 1px black solid;
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
@@ -113,7 +117,6 @@ img.halfwidth {
 table.image-showcase,
 table.image-showcase th,
 table.image-showcase td {
-    border: 1px black solid;
     border-collapse: collapse;
     cellspacing: 0px;
     padding: 1px 1px;
@@ -122,7 +125,6 @@ table.image-showcase td {
     width: 25%; /* Ensure each column takes up an equal portion of the table */
     padding: 5px;
     vertical-align: middle;
-    ;
 }
 table.image-showcase div.image-showcase{
     vertical-align: middle;
