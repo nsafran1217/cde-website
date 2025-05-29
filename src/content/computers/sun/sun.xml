@@ -5,7 +5,7 @@
         <section>
             <window-title>Terminal - Sun Microsystems</window-title>
             <content>
-            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 02-May-2025</span>
+            <span style="text-align: right; font-style: italic; display: block;">Last Updated: 28-May-2025</span>
             <h2>Sun Microsystems</h2>
             <img src="/img/sun/sun.png" height="120px" class="fullwidth"></img>
             <p>Sun Microsystems was my first exposure to Unix workstations. Back in 2017, I posted a
@@ -107,7 +107,7 @@
                             <td>UltraSPARC 143 MHz</td>
                             <td>256 MB</td>
                             <td>??</td>
-                            <td>36 GB 15k</td>
+                            <td>2x 36 GB 15k</td>
                             <td>Solaris 8/OpenBSD 6.9</td>
                             <td></td>
                         </tr>
@@ -134,8 +134,8 @@
                             <td>UltraSPARC IIe 650 MHz</td>
                             <td>256 MB</td>
                             <td>PGX64</td>
-                            <td>40 GB IDE</td>
-                            <td>Solaris 9</td>
+                            <td>2x 80 GB IDE</td>
+                            <td>Solaris 9/NetBSD 10</td>
                             <td></td>
                         </tr>
                         <tr>
