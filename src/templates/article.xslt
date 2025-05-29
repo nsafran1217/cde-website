@@ -27,7 +27,7 @@
 
             </head>
             <body>
-                <table>
+                <table class="main-body-table">
                     <tbody>
                         <tr>
                             <td class="navbar">
@@ -35,7 +35,7 @@
                                     <xsl:apply-templates select="document('./nav.xml')/navigation"/>
                                 </div>
                             </td>
-                            <td>
+                            <td class="main-body-td">
                                 <xsl:for-each select="sections/section">
                                     <div class="main-body-container">
                                         <div class="window-title"><xsl:value-of select="window-title"/></div>
@@ -45,6 +45,7 @@
                                     </div>
                                 </xsl:for-each>
                             </td>
+                            <td class="td-spacer"></td>
                         </tr>
                     </tbody>
                 </table>
