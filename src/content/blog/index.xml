@@ -9,6 +9,8 @@
     <table>
     <tr><td>Title</td><td>Date Published</td></tr>
     
+<tr><td><a href="004-ultra10-setup.html">Setting up Solaris 8 on Ultra 10</a></td><td>31-May-2025</td></tr>
+<tr><td><a href="003-synergy-unix.html">Setting up Synergy on UNIX workstations to share mouse and keyboards</a></td><td>30-May-2025</td></tr>
 <tr><td><a href="002-c360-hpux-install.html">Installing HP-UX 11.11 on a C360</a></td><td>27-May-2025</td></tr>
 <tr><td><a href="001-altix-linux.html">Modern Linux on SGI Altix</a></td><td>22-May-2025</td></tr>
 <tr><td><a href="000-this-website.html">This Website's Design</a></td><td>22-May-2025</td></tr>
