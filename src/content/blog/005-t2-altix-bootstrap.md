@@ -20,7 +20,14 @@ The steps are roughly:
 
 ## T2 root disk from ISO
 
-BLAH
+[Script to generate root FS from ISO](https://gist.github.com/johnny-mnemonic/debbe04cb11532ff894297b18f5d0180)
+
+
+    sudo ./t2trap.bash ia64 t2-24.12-ia64-base-desktop-glibc-gcc-itanium2.iso full
+    cd ia64
+    sudo tar cf ../t2-ia64full.tar .
+    
+
 
 ---
 ## Cross compile Linux Kernel
@@ -50,7 +57,7 @@ All you need to do is change `u64` to `unsigned long` in the `sn_dma_flush` func
             int is_tio;
 
 ### 4.19.325 Patch:
-You need to make the same above patch, as well as commenting out 2 lines in 1 other files. This is not a safe/correct change, but it works.    
+You need to make the patch above, as well as commenting out 2 lines in 1 other files. This is not a safe/correct change, but it works.    
 Comment out 2 instances of `res->flags |= IORESOURCE_UNSET;` in `drivers/pci/setup-res.c`
 
     diff --git a/arch/ia64/sn/pci/pcibr/pcibr_dma.c b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
@@ -267,13 +274,13 @@ Login with the root password you set, and run the `stone` program to start confi
 
 After done with inital configuration, reboot into 4.19 and we can start installing packages from the t2 sources.
 
-```
-cd /usr/src/t2-src
-svn up
 
-t2 install htop
-t2 install sudo
-```
+    cd /usr/src/t2-src
+    svn up
+
+    t2 install htop
+    t2 install sudo
+
 
 [Here's the list of packages in T2](https://t2sde.org/packages/)  
 Note that not all work on Itanium
