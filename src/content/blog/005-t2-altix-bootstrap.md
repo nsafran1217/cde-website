@@ -1,22 +1,23 @@
 # Bootstraping T2 SDE Linux on SGI Altix From SLES
 *Published: 10-Jun-2025 - Last Updated: 10-Jun-2025*
 
-T2 SDE is a linux source based linux distribution and package manager that run on many older OSes. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.
+T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.
 
-In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix and other IA64 systems.
+In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix. 
 
 ## Overview
-To get T2 on Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux Kernel version 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.
+To get T2 on an Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux kernel versions 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.
 
 The steps are roughly:  
+
 1. Create T2 root disk tarball from T2 ISO
-1. Use IA64 cross compiler to compile Linux kernel
-1. Boot SLES11 SP3 DVD into rescue mode and setup networking
-1. Format destination disk
-1. Copy T2 onto disk
-1. `chroot` into T2
-1. Configure T2
-1. Configure EFI partition
+2. Use IA64 cross compiler to compile Linux kernel
+3. Boot SLES11 SP3 DVD into rescue mode and setup networking
+4. Format destination disk
+5. Copy T2 onto disk
+6. `chroot` into T2
+7. Configure T2
+8. Configure EFI partition
 
 ## T2 root disk from ISO
 
@@ -34,10 +35,10 @@ The steps are roughly:
 ### Kernel Versions:
 I am a beginer when it comes to customizing the Linux kernel. These are my observations. This may change if I fix more issues in the later kernel.
 #### 3.14.79:
-The last working kernel with a simple patch to fix a compile issue. This kernel works well over the serial console, but I can't get SSH or NFS working on it. `svn up` also fails to work on this version. I assume there a compatibility issues with the binaries included with T2 and is too old. I recommend using this for initial setup since the serial console works well.
+The last working kernel with a simple patch to fix a compile issue. This kernel works well over the serial console, but I can't get SSH or NFS working on it. `svn up` also fails on this version. I assume there are compatibility issues with the binaries included with T2 and the kernel. I recommend using this for initial setup since the serial console works well.
 
 #### 4.19.325
-With 1 additional patch, this kernel works well. The biggest issue is with the serial console. It seems to drop input, or not echo your input back until you send another character. SSH, NFS, and other tools work correct on this kernel. I recommend using this kernel version.
+With 1 additional patch, this kernel works well. The biggest issue is with the serial console. It seems to drop input, or not echo your input back until you send another character. SSH, NFS, and other tools work correctly on this kernel. I recommend using this kernel version.
 
 ### 3.14.79 Patch:
 All you need to do is change `u64` to `unsigned long` in the `sn_dma_flush` function in `arch/ia64/sn/pci/pcibr/pcibr_dma.c`:
@@ -103,16 +104,28 @@ Link: [https://gist.github.com/nsafran1217/e9a5732999334a5df8c50b2ce314a92b#file
 
 ### Cross Compiling
 
-https://ftp.machine-hall.org/pub/toolchains/x86_64/
+Download the cross toolchain from here: [https://ftp.machine-hall.org/pub/toolchains/x86_64/](https://ftp.machine-hall.org/pub/toolchains/x86_64/)    
+Thanks to [Johnny Mnemonic for this](https://github.com/johnny-mnemonic)
+
+I used gcc-14.2 on Ubuntu 24.04. You need this gcc first in your PATH.
+
+Put my config in the linux source tree and run this:  
+`make ARCH=ia64 CROSS_COMPILE=ia64-linux- olddefconfig`
+
+If you need to modify the config, you can use menuconfig:  
+`make ARCH=ia64 CROSS_COMPILE=ia64-linux- menuconfig`
+
+And this command to make it:  
+`make -j$(nproc) ARCH=ia64 CROSS_COMPILE=ia64-linux- tar-pkg scripts/kconfig/conf  --syncconfig Kconfig`
+
+
+Additional References:
 
 http://epic-slack.org/#!articles/2024-12-15-building-your-own-kernel.md
 
 https://github.com/linux-ia64/linux-stable-rc/blob/__mirror/.github/workflows/mirror.yml#L124
 
 
-`make ARCH=ia64 CROSS_COMPILE=ia64-linux- olddefconfig`
-
-`make -j$(nproc) ARCH=ia64 CROSS_COMPILE=ia64-linux- tar-pkg scripts/kconfig/conf  --syncconfig Kconfig`
 
 ---
 ## Booting SLES11
@@ -124,9 +137,9 @@ Boot from the DVD. Your filesystem device may be different:
 Arrow key down to rescue system and add the correct boot flags:  
 `boot: console=ttySG0,38400n8`
 
-### Networking
+### Networking in rescue mode
 `ifconfig eth0 <ip address> netmask <netmask value>`  
-`route add default gw <route value> dev <network interface>`  
+`route add default gw <route value> dev eth0`  
 Edit `resolv.conf` and add a nameserver if you need DNS.
 
 I mount my NFS server, but you can get the files to the system however you want:  
@@ -207,9 +220,9 @@ So I have NFS available in T2:
 run `passwd` to set a root password  
 edit `/etc/resolv.conf` and setup DNS  
 
-In `/etc/inittab`, we need to add the SGI ttySG0 device as a console, otherwise, you wont be able to login via the L2 console.
+In `/etc/inittab`, we need to add the SGI ttySG0 device as a console, otherwise, you won't be able to login via the L2 console.
 
-Add this line. I added it around line 62 near the other virtual consoles. Renumber the other virtual consoles.  
+Add this line. I added it around line 62 near the other virtual consoles. Re-number the other virtual consoles if needed.  
 `0:12345:respawn:/sbin/agetty --noclear 38400 ttySG0 linux`  
 My file has this under Virtual Consoles:
 
@@ -223,19 +236,17 @@ My file has this under Virtual Consoles:
 
 ---
 ## EFI elilo setup
-[Download elilo-3.16-all.tar.gz](https://sourceforge.net/projects/elilo/files/elilo/elilo-3.16/)
-
-extract it, copy elilo-3.16-ia64.efi to /boot/efi/EFI/
-
-
-SLES11 rescue mode doesn't have efivars, so we need to manually setup the EFI partition for now.
+I couldn't get grub working, so we'll stay with elilo.
 
     mkdir /boot/efi
     mount /dev/sda1 /boot/efi
     mkdir /boot/efi/EFI
 
-    (we are still in elilo-3.12 source tree)
-    cp elilo.efi /boot/efi/EFI
+[Download elilo-3.16-all.tar.gz](https://sourceforge.net/projects/elilo/files/elilo/elilo-3.16/)
+Extract it, copy elilo-3.16-ia64.efi to /boot/efi/EFI/
+
+
+We don't have efivars, so we need to manually setup the EFI partition for now.
 
     cd /boot
     mkdir /boot/efi/EFI/boot
@@ -264,16 +275,16 @@ SLES11 rescue mode doesn't have efivars, so we need to manually setup the EFI pa
 
 ---
 ## Reboot, we are ready to boot
-exit the chroot, and reboot
+Exit the chroot, and reboot.
 
-At the efi prompt, boot elilo-3.16-ia64.efi from the disk.
+At the efi prompt, boot elilo-3.16-ia64.efi from the disk.  
+Type `t2-314` to boot the older kernel to do initial setup.
 
-You should be booted up! I recommend booting into 3.14.79 and setup networking with `stone`, then switch to 4.19.325 and do the rest over SSH.
+You should be booted up! If you see it finish booting but never get a login prompt, check your agetty configuration in `/etc/inittab`.
 
-Login with the root password you set, and run the `stone` program to start configuring the system.
+You can used `stone` to do initial setup tasks. After networking is setup, reboot into t2-419 and SSH to the system.
 
-After done with inital configuration, reboot into 4.19 and we can start installing packages from the t2 sources.
-
+Now we can start installing packages from the t2 sources.
 
     cd /usr/src/t2-src
     svn up
