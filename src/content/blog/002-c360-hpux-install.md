@@ -104,7 +104,7 @@ I build some tools first:
 * binutils-2.23.2
     * `./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls`
 
-*I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. 2.23.2 seems to work well*
+*I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. `ar` may have been broken. 2.23.2 seems to work well*
 
 GCC build reqs:
 
@@ -125,7 +125,7 @@ I skipped `make check`. I'm lazy.
 This compile took over 12 hours on the C360.
 
 I ended up recompiling because I did `--without-gnu-as` the first time and that doesn't work; you want gnu as.  
-I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed way faster (I dont know how long because I was asleep.)
+I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed in 4 ish hours.
 
 My PATH order was:  
 `export PATH=/usr/local/gcc-4.8.5/bin:/usr/local/gcc4/bin:/usr/local/bin:$PATH`
