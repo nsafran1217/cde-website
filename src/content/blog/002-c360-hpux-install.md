@@ -58,7 +58,7 @@ The builtin cc only works for compiling the kernel. I'm going to install HP ansi
 
 ## ansic (HP aCC)
 You can download ansic from from osarchive.org:  
-* `os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz`
+`os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz`
 
 1. Run `swinstall` and open `B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot`
 2. Mark everything for install. Go to Actions->Install, and let it do its thing.
@@ -89,20 +89,20 @@ automake-1.8.5: `./configure; make`
 If you get this error:  `/usr/ccs/bin/ld: Unrecognized argument: +init`  
 Make sure `PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative patch)` is installed. It is included in the 2009 Support Plus depot.  
 
-With that patch, it seems like HP's ld is good enough and we don't need binutils.
+That fixes HP's ld so it actually works.
 
 ## GCC 4.8.5
 
 `export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH`
 
 I build some tools first:
-* tar-1.27.1
-* gawk-3.1.8
-* sed-4.2.2
-* grep-2.6.3
-* make-3.82
-* binutils-2.23.2
-    * `./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls`
+
+1. tar-1.27.1
+2. gawk-3.1.8
+3. sed-4.2.2
+4. grep-2.6.3
+5. make-3.82
+6. binutils-2.23.2: configure like this: `./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls`
 
 *I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. `ar` may have been broken. 2.23.2 seems to work well*
 
