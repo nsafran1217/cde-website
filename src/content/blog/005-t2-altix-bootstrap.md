@@ -74,27 +74,21 @@ Comment out 2 instances of `res->flags |= IORESOURCE_UNSET;` in `drivers/pci/set
      {
             nasid_t nasid;
             int is_tio;
-    diff --git a/drivers/pci/setup-res.c b/drivers/pci/setup-res.c
-    index c35c61816903..d48cd5a832a0 100644
-    --- a/drivers/pci/setup-res.c
-    +++ b/drivers/pci/setup-res.c
-    @@ -150,7 +150,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
-            if (!root) {
-                    pci_info(dev, "can't claim BAR %d %pR: no compatible bridge window\n",
-                             resource, res);
-    -               res->flags |= IORESOURCE_UNSET;
-    +               //res->flags |= IORESOURCE_UNSET;
-                    return -EINVAL;
-            }
-
-    @@ -158,7 +158,7 @@ int pci_claim_resource(struct pci_dev *dev, int resource)
-            if (conflict) {
-                    pci_info(dev, "can't claim BAR %d %pR: address conflict with %s %pR\n",
-                             resource, res, conflict->name, conflict);
-    -               res->flags |= IORESOURCE_UNSET;
-    +               //res->flags |= IORESOURCE_UNSET;
-                    return -EBUSY;
-            }
+    
+    diff --git a/arch/ia64/sn/kernel/io_init.c b/arch/ia64/sn/kernel/io_init.c
+    index d63809a6adfa..2446ffa0957a 100644
+    --- a/arch/ia64/sn/kernel/io_init.c
+    +++ b/arch/ia64/sn/kernel/io_init.c
+    @@ -195,6 +195,9 @@ sn_io_slot_fixup(struct pci_dev *dev)
+     		if (res->parent && res->parent->child)
+     			release_resource(res);
+    
+    +		/* Ensure resource is marked as assigned so parent lookups succeed */
+    +		res->flags &= ~IORESOURCE_UNSET;
+    +
+     		if (res->flags & IORESOURCE_IO)
+     			insert_resource(&ioport_resource, res);
+     		else
 
 ### Kernel Config
 
