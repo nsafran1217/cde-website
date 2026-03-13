@@ -24,18 +24,37 @@ I have no need for a full 16 brick system, so I sold some bricks for parts and p
         <tr>
             <td>
                 <div class="image-showcase">
-                    <a href="/img/sgi/altix3700.jpg"><img src="/img/sgi/altix3700.jpg" alt="3700"></img></a>
+                    <a href="/img/sgi/350-front.jpg"><img src="/img/sgi/350-front.jpg" alt="3700"></img></a>
                 </div>
+                Current Setup
             </td>
             <td>
-                <div class="image-showcase">
-                    <a href="/img/sgi/altix3700-rear.jpg"><img src="/img/sgi/altix3700-rear.jpg" alt="3700 rear"></img></a>
-                </div>
             </td>
             <td>
                 <div class="image-showcase">
                     <a href="/img/sgi/altix350.jpg"><img src="/img/sgi/altix350.jpg" alt="350 "></img></a>
                 </div>
+                All the equipment I got
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sgi/350-node-bottom.jpg"><img src="/img/sgi/350-node-bottom.jpg" alt="3700"></img></a>
+                </div>
+                Bottom of CPU node board
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sgi/350-node-nocpu.jpg"><img src="/img/sgi/350-node-nocpu.jpg" alt="3700 rear"></img></a>
+                </div>
+                CPU Node board without CPUs
+            </td>
+            <td>
+                <div class="image-showcase">
+                    <a href="/img/sgi/350-nonode.jpg"><img src="/img/sgi/350-nonode.jpg" alt="350 "></img></a>
+                </div>
+                Case without node board
             </td>
         </tr>
     </tbody>

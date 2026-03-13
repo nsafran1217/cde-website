@@ -13,11 +13,15 @@ set -e
 
 
 cd src
+echo "GEN XML"
 ./gen-xml-from-md.sh
+echo "GEN index for blogs"
 ./gen-blog-index.sh
 
 cd content
+echo "GEN articles from xml"
 python ../gen-articles.py
+echo "GEN home page"
 python ../gen-index.py
 cd ../../OUTPUT
 python ../gen-sitemap.py

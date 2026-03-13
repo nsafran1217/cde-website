@@ -9,8 +9,9 @@ cd content
 for file in `find . -name *.md`; do
     echo $file
     # Extract the title
-    sed -i "s|@TITLE@|$title|" $file
-
+    title=$(grep -m 1 '^# ' "$file")
+    title="${title#\# }"
+    
 
     # Identify theme based on parent directory
     parentdir=$(basename $(dirname "$file"))
@@ -44,7 +45,7 @@ for file in `find . -name *.md`; do
     #$file replace .md with .xml
     xmlfile="${file%.md}.xml"
 
-    
+
     # Generate the XML file
     cat header.x > $xmlfile
     markdown "$file" >> $xmlfile
@@ -55,7 +56,7 @@ for file in `find . -name *.md`; do
     sed -i "s/@THEME@/$theme/" $xmlfile
 
     # Replace @TITLE@ in the XML file with the extracted title
-    sed -i "s/@TITLE@/$title/" $xmlfile
+    sed -i "s|@TITLE@|$title|" $xmlfile
 
     # Replace each remaining <h2> with a window-break section + <h2>
     sed -i 's|<h2[^>]*>\(.*\)</h2>|</content></section>\n<section><window-title>@TERMTITLE@ - \1</window-title>\n<content>\n<h2>\1</h2>|' $xmlfile

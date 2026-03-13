@@ -21,7 +21,7 @@ I found two articles that were published when the computers were purchased:
         <tr>
             <td>
                 <div class="image-showcase">
-                    <a href="/img/sgi/altix3700.jpg"><img src="/img/sgi/altix3700.jpg" alt="3700"></img></a>
+                    <a href="/img/sgi/3700-front.jpg"><img src="/img/sgi/3700-front.jpg" alt="3700"></img></a>
                 </div>
             </td>
             <td>
@@ -31,7 +31,7 @@ I found two articles that were published when the computers were purchased:
             </td>
             <td>
                 <div class="image-showcase">
-                    <a href="/img/sgi/altix350.jpg"><img src="/img/sgi/altix350.jpg" alt="350 "></img></a>
+                    <a href="/img/sgi/altix3700.jpg"><img src="/img/sgi/altix3700.jpg" alt="350 "></img></a>
                 </div>
             </td>
         </tr>

@@ -1,4 +1,4 @@
-#Silicon Graphics
+# Silicon Graphics
 *Last Updated: 02-May-2025*
 
 Silicon Graphics workstations are legendary among Unix workstations, mostly for their

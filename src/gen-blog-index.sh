@@ -8,7 +8,10 @@ cat index_head.x > index.xml
 # Loop through all .md files and extract the date
 for file in `ls *.md | sort -r`; do
     # Extract the title
-    sed -i "s|@TITLE@|$title|" $file
+    title=$(grep -m 1 '^# ' "$file")
+    title="${title#\# }"
+
+    
     # Extract the date from the second line
     date=$(sed -n 's/^\*Published: \(.*\) - Last Updated: .*$/\1/p' "$file")
 
