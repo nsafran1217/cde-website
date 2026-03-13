@@ -58,8 +58,10 @@ Systems which I have more to say about
         </tr>
     </tbody>
 </table>
-<h2>All Systems:</h2>
+
+### All Systems:
 Will update eventually with all specs
+
 <table class="specs">
     <tbody>
         <tr>

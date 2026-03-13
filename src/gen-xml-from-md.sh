@@ -7,8 +7,9 @@ cd content
 
 # Loop through all .md files and extract the date
 for file in `find . -name *.md`; do
+    echo $file
     # Extract the title
-    title=$(grep -m 1 '^# ' "$file" | sed 's/^# //')
+    sed -i "s|@TITLE@|$title|" $file
 
 
     # Identify theme based on parent directory
