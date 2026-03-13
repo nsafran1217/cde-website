@@ -1,25 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<page theme="sgi">
-    <title>nsafran.com - </title>
-    <sections>
-        <section>
-            <window-title>winterm - </window-title>
-            <content>
-<h1>Silicon Graphics</h1>
+#Silicon Graphics
+*Last Updated: 02-May-2025*
 
-<p><em>Last Updated: 02-May-2025</em></p>
+Silicon Graphics workstations are legendary among Unix workstations, mostly for their
+impressive graphics hardware, and their unique case designs.
 
-<p>Silicon Graphics workstations are legendary among Unix workstations, mostly for their
-impressive graphics hardware, and their unique case designs.</p>
+SGI's were very expensive when new, so very few home users had an opportunity to work with them. 
+## Featured Systems
 
-<p>SGI's were very expensive when new, so very few home users had an opportunity to work with them. </p>
-
-</content></section>
-<section><window-title>winterm - Featured Systems</window-title>
-<content>
-<h2>Featured Systems</h2>
-
-<p>Systems which I have more to say about</p>
+Systems which I have more to say about
 
 <table class="image-showcase">
     <tbody>
@@ -70,14 +58,8 @@ impressive graphics hardware, and their unique case designs.</p>
         </tr>
     </tbody>
 </table>
-
-</content></section>
-<section><window-title>winterm - All Systems:</window-title>
-<content>
 <h2>All Systems:</h2>
-
-<p>Will update eventually with all specs</p>
-
+Will update eventually with all specs
 <table class="specs">
     <tbody>
         <tr>
@@ -172,7 +154,4 @@ impressive graphics hardware, and their unique case designs.</p>
         </tr>
     </tbody>
 </table>
-</content>
-</section>
-</sections>
-</page>
+ 

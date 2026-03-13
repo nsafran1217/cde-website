@@ -24,6 +24,16 @@ for file in `ls *.md | sort -r`; do
     # Replace @TITLE@ in the XML file with the extracted title
     sed -i "s/@TITLE@/$title/" "${url%.html}.xml"
 
+
+
+    theme="default"
+    termtitle="Terminal"
+
+    #replace theme
+    sed -i "s/@THEME@/$theme/" $xmlfile
+    # replace termtitle
+    sed -i "s/@TERMTITLE@/$termtitle/" $xmlfile
+
     # Append the information to the temporary file
     
     echo "<tr><td><a href=\"$url\">$title</a></td><td>$date</td></tr>" >> index.xml

@@ -20,7 +20,7 @@ There's no graphical menu on this system like the rx2660, so you need to drop to
 * Drop to to EFI shell by pressing S at the boot menu.
 * Find out the Driver ID and CTRL ID (Page 147 of the PDF linked above)
 * * Run `drivers`  and find the SAS Host Bus Adapter. The ID is the left most column. My controller name was `Smart Array SAS Driver v3.24 ` and it was ID `9C`
-* * Run `drvcfg` and take nnote of the Ctrl ID of your Drv. In my case it was [9A]. The output looks like this:
+* * Run `drvcfg` and take note of the Ctrl ID of your Drv. In my case it was [9A]. The output looks like this:
 ```
 Shell> drvcfg 9C
 Configurable Components
@@ -28,9 +28,9 @@ Configurable Components
 ```
 * * Now run the graphical array tool with the command `drvcfg -s 9C 9A`
 
-Note that I could not get the array config tool to accept my changes when viewing the serial console over a telnet iLO session. I had to use the remote serial console on a Windows XP machine. I'm sure connecting a VGA montitor and keyboard would have worked as well.
+Note that I could not get the array config tool to accept my changes when viewing the serial console over a telnet iLO session. I had to use the remote serial console on a Windows XP machine. I'm sure connecting a VGA monitor and keyboard would have worked as well.
 
-The manual I linked also has instructions for chaning the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. 
+The manual I linked also has instructions for changing the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. 
 
 ## Installing HP-UX 11.31 (11i v3)
 
@@ -54,4 +54,4 @@ I also increase some of the partition sizes, but we can do all of that after ins
 HP-UX installs take a LONG time. I think this install took about 3 hours
 
 ## Next Steps
-Next I want to setup a modern GCC toolchain, but I have set this project asside for now. I will return at a later date. I'd also like to finally play with Integrity VM.
+Next I want to setup a modern GCC toolchain, but I have set this project aside for now. I will return at a later date. I'd also like to finally play with Integrity VM.

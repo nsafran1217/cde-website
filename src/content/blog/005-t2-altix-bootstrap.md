@@ -1,5 +1,5 @@
 # Bootstraping T2 SDE Linux on SGI Altix From SLES
-*Published: 10-Jun-2025 - Last Updated: 12-Jul-2025*
+*Published: 10-Jun-2025 - Last Updated: 13-Mar-2026*
 
 T2 SDE is a source based linux distribution and package manager that runs on many different architectures. It is one of the last Linux distros that support IA64, and has been ported to some MIPS SGI machines as well.
 
@@ -58,8 +58,8 @@ All you need to do is change `u64` to `unsigned long` in the `sn_dma_flush` func
             int is_tio;
 
 ### 4.19.325 Patch:
-You need to make the patch above, as well as commenting out 2 lines in 1 other files. This is not a safe/correct change, but it works.    
-Comment out 2 instances of `res->flags |= IORESOURCE_UNSET;` in `drivers/pci/setup-res.c`
+You need to make the patch above, as well as adding one line in arch/ia64/sn/kernel/io_init.c. `res->flags &= ~IORESOURCE_UNSET;`. Below is a combined patch.   
+
 
     diff --git a/arch/ia64/sn/pci/pcibr/pcibr_dma.c b/arch/ia64/sn/pci/pcibr/pcibr_dma.c
     index 1e863b277ac9..6b632c290af2 100644
