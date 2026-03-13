@@ -3,10 +3,10 @@
 
 Some notes about setting up a build environment on Solaris 8, specifically my Ultra 10.
 
-## OS
+### OS
 I don't have notes for the OS install. Solaris 8. 2003 release.
 
-## Packages
+### Packages
 I installed all these from the sunfreeware archives:
 
     autoconf-2.60-sol8-sparc-local     libgcc-3.4.1-sol8-sparc-local      synergy-1.3.1-sol8-sparc-local
@@ -23,7 +23,7 @@ Make symlink from libintl-3.4.0 to libintl.so.8:
 
 Lots of software was installed from the 4 CDs that the OS comes on, including OpenGL from the Supplemental CD.
 
-## GCC 4.6.4
+### GCC 4.6.4
 Starting with the packages above. Make sure you use GNU tar to extract. I put `/usr/local/bin` first in `$PATH`.
 
 To add /usr/local/lib to the system library search path:

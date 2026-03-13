@@ -12,27 +12,7 @@ for file in `ls *.md | sort -r`; do
     # Extract the date from the second line
     date=$(sed -n 's/^\*Published: \(.*\) - Last Updated: .*$/\1/p' "$file")
 
-    # Strip off the "000-" prefix from the URL
-    url=$(basename "$file" .md | sed 's/^[0-9]\{3\}-//').html
     url=$(basename "$file" .md).html
-    
-    # Generate the XML file
-    cat header.x > "${url%.html}.xml"
-    markdown "$file" >> "${url%.html}.xml"
-    cat footer.x >> "${url%.html}.xml"
-
-    # Replace @TITLE@ in the XML file with the extracted title
-    sed -i "s/@TITLE@/$title/" "${url%.html}.xml"
-
-
-
-    theme="default"
-    termtitle="Terminal"
-
-    #replace theme
-    sed -i "s/@THEME@/$theme/" $xmlfile
-    # replace termtitle
-    sed -i "s/@TERMTITLE@/$termtitle/" $xmlfile
 
     # Append the information to the temporary file
     

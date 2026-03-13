@@ -7,10 +7,10 @@ Now, I'd like to get it working on some of my UNIX workstations since keyboards 
 
 I will add to this page when I setup more systems with synergy.
 
-# Synergy 1.2.8
+## Synergy 1.2.8
 This is the last release before they moved to cmake, so this is the one I used.
 
-## Solaris 9
+### Solaris 9
 ### Build & Install
 Building  was easy. I have GNU binutils and GCC.  
 `GNU ld (GNU Binutils) 2.24`  
@@ -41,7 +41,7 @@ Config file: `/etc/synergy.conf`
            left = blade150
     end
 
-## HP-UX 11.11
+### HP-UX 11.11
 ### Build & Install
 You must have either gnu ld or a fully patched HP ld with patch PHSS_39749. This can be found on the 2009-12 Support Plus CD. See my [blog entry about setting up my C360 for specifics](002-c360-hpux-install.html).  
 If you don't, you will get an error about XTest not existing. This is due to a linker error.

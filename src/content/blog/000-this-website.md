@@ -6,14 +6,14 @@ When I originally made a website, I used Publii, which is a WSYIWYG static site 
 I had a few goals for the site: Make it static so I can host it on GitHub Pages, no Javascript so older browsers can at least load the site, and for it to be somewhat easy to update with new content.
 <a href="https://github.com/nsafran1217/cde-website">GitHub for the website "source"</a>
 
-## Inspiration
+### Inspiration
 [cosam.org](http://www.cosam.org/) was my inspiration for the layout of the site, with a sidebar that changed depending on the page.  
 [4dwm.com](https://www.4dwm.com/) inspired me to make the site look like a CDE/HP VUE/4DWM desktop. 
 
 Making this website ended up being a lot of work since I have no experience with web design, except for one class I took in 10th grade making websites in Adobe Dreamweaver CS3 (which was very outdated by then).
 Originally, it was going to look much closer to cosam.org with a simpler theme. I was planning on using [https://simplecss.org/](https://simplecss.org/) for the styling, but I got inspired when I saw 4dwm.com.
 
-## Details
+### Details
 The first draft of the site was all HTML with a small amount of Javascript to load the navbar on each page, but that didn't meet my goal for no JS. I then came across [xslt](https://www.w3schools.com/xml/xsl_intro.asp), which allows you to use a template file to convert an XML file into an HTML file.
 
 With some help from ChatGPT, I started tweaking the template to insert the navbar template on each site. The xslt template also let me generate multiple "Windows" on the site relatively easily. 
@@ -28,5 +28,5 @@ XSLT templates are in `/src/templates`. All the XML and MD files are in `/src/co
 
 I need to come back to this and try to integrate it into the main github pages repo. Currently, I manually copy the contents of OUTPUT into the github pages repo to update the site.
 
-## Conclusion
+### Conclusion
 I'm happy with how the website looks on modern browsers, but old browsers struggle a lot with most of the css formatting used to make the "windows". I'm not sure if there's a solution to that, but at least the text loads on old browsers.

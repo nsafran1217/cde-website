@@ -13,8 +13,9 @@ set -e
 
 
 cd src
-./gen-blog.sh
-./gen-computers.sh
+./gen-xml-from-md.sh
+./gen-blog-index.sh
+
 cd content
 python ../gen-articles.py
 python ../gen-index.py

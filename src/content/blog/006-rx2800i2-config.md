@@ -3,18 +3,18 @@
 
 I recently picked up an HP Integrity rx2800 i2 server in a lot of server equipment. This is the newest Itanium server I own. In this article I will walk through configuring the system including setting up RAID array on the integrated p410i controller and installing HP-UX 11.31, along with installing setting up a GCC toolchain (eventually).
 
-## First powerup
+### First powerup
 When I first powered on the server, all the warning lights for the RAM, were lit. It looks like somebody took RAM out of the server and reinstalled the RAM riser in the wrong slot. Following the diagrams on the lid, I moved the RAM into a valid configuration. Currently I have 64GB of RAM, which is way more than I need.
 
 The RAM test on these machines takes a long time. The POST on this system takes over 5 minutes.
 
-## iLO password
+### iLO password
 
 I followed [these instructions](https://portal-iam-ext-pro.it.hpe.com/hpesc/public/docDisplay?docId=c02728748&docLocale=en_US) to reset the iLO password. 
 Note that the username is Administrator on this version of iLO/MP, not Admin like the older servers.  
 Make sure you set a password for Administrator before the timer 15 minute timer runs out
 
-## Configuring a RAID array on the p410i
+### Configuring a RAID array on the p410i
 There's no graphical menu on this system like the rx2660, so you need to drop to the EFI shell to load the array configration tool. The [HP Integrity rx2800 i2 Server User Service Guide](https://community.hpe.com/hpeb/attachments/hpeb/itrc-275/13000/1/rx2800-Maint.pdf) is a great reference.
 
 * Drop to to EFI shell by pressing S at the boot menu.
@@ -32,7 +32,7 @@ Note that I could not get the array config tool to accept my changes when viewin
 
 The manual I linked also has instructions for changing the mode from RAID to HBA on the controller, but I wanted RAID 1 so I did not need adjust my settings.. 
 
-## Installing HP-UX 11.31 (11i v3)
+### Installing HP-UX 11.31 (11i v3)
 
 I used HP-UX 11.31 DC-OE from Tenox's OS Archive:
 

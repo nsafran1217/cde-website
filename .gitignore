@@ -5,3 +5,4 @@
 /OUTPUT/sitemap.xml 
 /src/templates/blogspotlight.xml
 /src/content/blog/0*.xml
+/src/content/computers/*/*.xml

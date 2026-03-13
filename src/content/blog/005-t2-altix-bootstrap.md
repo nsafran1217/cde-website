@@ -5,7 +5,7 @@ T2 SDE is a source based linux distribution and package manager that runs on man
 
 In my opinion, T2 is the best option in 2025 for a modern Linux on SGI Altix. 
 
-## Overview
+# Overview
 To get T2 on an Altix, you can either build the disk on another system, or you can bootstrap from the Atlix. I'm going to bootstrap from SLES11 SP3, with Linux kernel versions 3.14.79 and 4.19.325. I'll explain why those 2 versions and the changes needed to get them running later.
 
 The steps are roughly:  
@@ -19,7 +19,7 @@ The steps are roughly:
 7. Configure T2
 8. Configure EFI partition
 
-## T2 root disk from ISO
+### T2 root disk from ISO
 
 [Script to generate root FS from ISO](https://gist.github.com/johnny-mnemonic/debbe04cb11532ff894297b18f5d0180)
 
@@ -30,7 +30,7 @@ The steps are roughly:
     
 
 
----
+
 ## Cross compile Linux Kernel
 ### Kernel Versions:
 I am a beginer when it comes to customizing the Linux kernel. These are my observations. This may change if I fix more issues in the later kernel.
@@ -121,7 +121,6 @@ https://github.com/linux-ia64/linux-stable-rc/blob/__mirror/.github/workflows/mi
 
 
 
----
 ## Booting SLES11
 Im going to assume you know how to get to the EFI console on an SGI Altix.  
 Read this if you don't: [007-5640-001: Chapter 2. Software Planning and Installation](https://techpubs.jurassic.nl/library/manuals/5000/007-5640-001/sgi_html/ch02.html)
@@ -177,7 +176,7 @@ I only have one disk installed while doing this, so my disk is /dev/sda. Please 
 `mount /dev/sda2 /mnt/t2`
 
 ---
-## Copying T2 to root disk
+### Copying T2 to root disk
 Lets extract the T2 root tar into the new disk.
 
 `cd /mnt/t2`  
@@ -192,7 +191,7 @@ Grab your kernels. I copy the tars in /mnt/t2/root. I'm going to setup both vers
     cp -r lib /mnt/t2/
 
 ---
-## chroot to T2
+### chroot to T2
 So I have NFS available in T2:  
 `mkdir /mnt/t2/nfs`  
 `mount --bind /nfs /mnt/t2/nfs`  
@@ -209,8 +208,7 @@ So I have NFS available in T2:
     chroot /mnt/t2/ /bin/bash
     source /etc/profile
 
----
-## Initial T2 configuration
+### Initial T2 configuration
 run `passwd` to set a root password  
 edit `/etc/resolv.conf` and setup DNS  
 
@@ -228,8 +226,7 @@ My file has this under Virtual Consoles:
     5:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty5 linux
     6:12345:respawn:/sbin/agetty -f /etc/issue.ansi tty6 linux
 
----
-## EFI elilo setup
+### EFI elilo setup
 I couldn't get grub working, so we'll stay with elilo.
 
     mkdir /boot/efi
@@ -267,8 +264,8 @@ We don't have efivars, so we need to manually setup the EFI partition for now.
             root=/dev/sda2
             read-only
 
----
-## Reboot, we are ready to boot
+
+### Reboot, we are ready to boot
 Exit the chroot, and reboot.
 
 At the efi prompt, boot elilo-3.16-ia64.efi from the disk.  

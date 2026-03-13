@@ -52,11 +52,11 @@ Extract it and point swinstall at GOLDQPK11i_B.11.11.0912.483.depot
 I was having issues with my stty setting over telnet. I added this to my .bash_profile: `stty intr ^C erase ^H`  
 Also, bash is my shell for my user.
 
----
-# C compilers
+
+## C compilers
 The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.
 
-## ansic (HP aCC)
+### ansic (HP aCC)
 You can download ansic from from osarchive.org:  
 `os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz`
 
@@ -64,7 +64,7 @@ You can download ansic from from osarchive.org:
 2. Mark everything for install. Go to Actions->Install, and let it do its thing.
 
 
-## GCC Toolchain
+### GCC Toolchain
 
 I'm going to install GCC 4.2.3 from this archive: http://ftp.netbsd.org/pub/pkgsrc/misc/tnn/  
 This person used it to build pkgsrc a few years ago: https://vanalboom.org/node/17.html
@@ -91,7 +91,7 @@ Make sure `PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative patch)` 
 
 That fixes HP's ld so it actually works.
 
-## GCC 4.8.5
+### GCC 4.8.5
 
 `export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH`
 
@@ -133,8 +133,8 @@ My PATH order was:
 DONE. You now have GCC 4.8.5 in /usr/local/gcc-4.8.5 with GNU as V2.23.2.
 
 
----
-# Software building
+
+## Software building
 Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.
 
 * libmikmod-3.1.10
@@ -165,8 +165,8 @@ Fetched from gnu and it built without any issues. Build non wide character suppo
 `./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec`
 
 
----
-# Adding a second disk
+
+## Adding a second disk
 I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.
 
 In SAM, Disks and File systems, I selected the disk, Actions->Configure. I added this to a new Volume Group, vg01.
