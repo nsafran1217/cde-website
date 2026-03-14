@@ -1,7 +1,3 @@
-/OUTPUT/computers
-/OUTPUT/projects
-/OUTPUT/blog
-/OUTPUT/index.html
-/OUTPUT/sitemap.xml 
 /src/templates/blogspotlight.xml
-/src/content/blog/0*.xml
+/blog/0*.xml
+/computers/*/*.xml

@@ -1,4 +1,0 @@
-            </content>
-        </section>
-    </sections>
-</page>

@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Setting up Solaris 8 on Ultra 10</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
+</head>
+<body><table class="main-body-table"><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
+
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td class="main-body-td"><div class="main-body-container">
+<div class="window-title">Terminal - Setting up Solaris 8 on Ultra 10</div>
+<div class="main-body"><content>
+<h1>Setting up Solaris 8 on Ultra 10</h1>
+
+<p><em>Published: 31-May-2025 - Last Updated: 31-May-2025</em></p>
+
+<p>Some notes about setting up a build environment on Solaris 8, specifically my Ultra 10.</p>
+
+<h3>OS</h3>
+
+<p>I don't have notes for the OS install. Solaris 8. 2003 release.</p>
+
+<h3>Packages</h3>
+
+<p>I installed all these from the sunfreeware archives:</p>
+
+<pre><code>autoconf-2.60-sol8-sparc-local     libgcc-3.4.1-sol8-sparc-local      synergy-1.3.1-sol8-sparc-local
+automake-1.7.1-sol8-sparc-local    libiconv-1.11-sol8-sparc-local     tar-1.26-sol8-sparc-local
+bash-3.2-sol8-sparc-local          libintl-3.4.0-sol8-sparc-local     vim-7.0-sol8-sparc-local
+binutils-2.21.1a-sol8-sparc-local  libtool-1.5-sol8-sparc-local       wget-1.10.2-sol8-sparc-local
+gcc-3.4.6-sol8-sparc-local         m4-1.4.7-sol8-sparc-local          xv-3.10a-sol8-sparc-local
+gettext-0.14.1-sol8-sparc-local    make-3.81-sol8-sparc-local         zlib-1.2.3-sol8-sparc-local
+</code></pre>
+
+<p><code>pkgadd -d filename</code></p>
+
+<p>Make symlink from libintl-3.4.0 to libintl.so.8: <br>
+<code>ln -s libintl.so.3.4.0 /usr/local/lib/libintl.so.8</code></p>
+
+<p>Lots of software was installed from the 4 CDs that the OS comes on, including OpenGL from the Supplemental CD.</p>
+
+<h3>GCC 4.6.4</h3>
+
+<p>Starting with the packages above. Make sure you use GNU tar to extract. I put <code>/usr/local/bin</code> first in <code>$PATH</code>.</p>
+
+<p>To add /usr/local/lib to the system library search path:
+<code>crle -l /usr/lib:/usr/lib/secure:/usr/local/lib</code>  </p>
+
+<p>We want 32 bit ABI for the following.
+<code>export ABI=32</code></p>
+
+<p>All were just <code>./configure; make; make install</code>. Easy.
+1. gmp-4.3.2
+2. mpfr-2.4.2
+3. mpc-1.0.1  </p>
+
+<p>We provide the paths to as and ld so that gcc can find /usr/local/lib/gcc/sparc-sun-solaris2.8/3.4.6/sparcv9/crt1.o. Also, unset the ABI so we get multilib support.</p>
+
+<pre><code>unset ABI
+./configure --prefix=/usr/local/gcc-4.6.4 --enable-languages=c,c++ --disable-nls --enable-threads=posix --with-gnu-ld --with-gnu-as --with-as=/usr/local/bin/as  --with-ld=/usr/local/bin/ld
+</code></pre>
+
+<p><code>make</code></p>
+
+<p>Quick hack needed in <code>sparc-sun-solaris2.8/libstdc++-v3/include/ext/concurrence.h</code></p>
+
+<p>On line 345, change <code>__GTHREAD_COND_INIT</code> to <code>__GTHREAD_COND_INITzzz</code> so that conditional evaluates false.</p>
+
+<p>And just above that #if, add this</p>
+
+<pre><code>#ifndef __GTHREAD_COND_INIT_FUNCTION
+#define __GTHREAD_COND_INIT_FUNCTION(p) pthread_cond_init((p), NULL)
+#endif
+</code></pre>
+
+<p>This ended up taking about 12 hours to compile, if not more. Maybe it would be faster if I had a SCSI disk rather than IDE in the system.</p>
+
+<p>You may have luck with a slightly newer or older GCC. This process worked fine on Solaris 9, but was less smooth on Solaris 8.</p>
+</content></div>
+</div></td>
+<td class="td-spacer"></td>
+</tr></tbody></table></body>
+</html>
