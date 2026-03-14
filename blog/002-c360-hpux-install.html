@@ -1,0 +1,314 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nsafran.com - Installing HP-UX 11.11 on a C360</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/default-back.css">
+</head>
+<body><table class="main-body-table"><tbody><tr>
+<td class="navbar"><div class="navbar">
+<div class="window-title">Navigation</div>
+<div class="cde-menu"><content>
+        <ul class="cde-menu">
+            <li class="home-link">
+                <a href="/index.html">
+                    <img src="/img/icons/Fphome.l.bmp" height="40" alt="Home" class="nav-icon" style="vertical-align: middle;"> Home
+                </a>
+            </li>
+            <li class="section-heading"><span><img src="/img/icons/Dtterm.m.bmp" class="nav-icon" style="vertical-align: middle;"> Computers</span></li>
+
+            <li class="section-link"><a href="/computers/sgi/sgi.html">Silicon Graphics</a></li>
+
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix350.html">Altix 350</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/altix3700.html">Altix 3700</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indigo2.html">Indigo2</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/indy.html">Indy</a></li>
+            <li class="sgi-nested subsection-link"><a href="/computers/sgi/octane.html">Octane</a></li>
+
+            <li class="section-link"><a href="/computers/sun/sun.html">Sun Microsystems</a></li>
+
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ipx.html">SPARCstation IPX</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/sparc5.html">SPARCstation 5</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra1.html">Ultra 1</a></li>
+            <li class="sun-nested subsection-link"><a href="/computers/sun/ultra10.html">Ultra 10</a></li>
+
+            <li class="section-link"><a href="/computers/hp/hp.html">HP</a></li>
+
+            <li class="hp-nested subsection-link"><a href="/computers/hp/715.html">715/100</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/c8000.html">C8000</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rp3440.html">rp3440</a></li>
+            <li class="hp-nested subsection-link"><a href="/computers/hp/rx2660.html">rx2660</a></li>
+
+            <li class="section-link"><a href="/computers/dec/dec.html">Digital</a></li>
+
+            <li class="dec-nested subsection-link"><a href="/computers/dec/pdp1134.html">PDP 11/34a</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vax3100.html">VAXstation 3100</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/alpha1000.html">Alphaserver 1000</a></li>
+            <li class="dec-nested subsection-link"><a href="/computers/dec/vt240.html">VT240</a></li>
+
+            <li class="section-link"><a href="/computers/ibm/ibm.html">IBM</a></li>
+
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/rs6000.html">RS/6000 Model 43p</a></li>
+            <li class="ibm-nested subsection-link"><a href="/computers/ibm/power740.html">Power 740</a></li>
+
+            <li class="section-link"><a href="/computers/next/next.html">NeXT</a></li>
+
+            <li class="section-heading"><span><img src="/img/icons/DtABbil.m.bmp" class="nav-icon" style="vertical-align: middle;">Projects</span></li>
+
+            <li class="section-link"><a href="/projects/z80/z80.html">Z80 Computer</a></li>
+
+            <li class="section-link"><a href="/projects/nixie/nixie.html">Nixie Tubes/VFD</a></li>
+            
+            <li class="subsection-link"><a href="/projects/nixie/in12-clock.html">Nixie Tube Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/weather-clock.html">Nixie Weather Clock</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/ins1-matrix.html">INS-1 Nixie Tube Matrix</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/iv17-board.html">IV17 VFD Board</a></li>
+            <li class="subsection-link"><a href="/projects/nixie/soyuz.html">Soyuz 744H Clock</a></li>
+            
+            <li class="section-heading" style="padding-top: 16px;">
+            <li class="home-link" style="margin-top: 6px;">
+                <a href="/blog/index.html">
+                    <img src="/img/icons/Fppenpd.l.bmp" height="40" alt="Blog" class="nav-icon" style="vertical-align: middle;"> Blog
+                </a>
+            </li>
+            <li class="section-link"><a href="/blog/about.html">About me</a></li>
+        </ul>
+        </content></div>
+</div></td>
+<td class="main-body-td">
+<div class="main-body-container">
+<div class="window-title">Terminal - Installing HP-UX 11.11 on a C360</div>
+<div class="main-body"><content>
+<h1>Installing HP-UX 11.11 on a C360</h1>
+
+<p><em>Published: 27-May-2025 - Last Updated: 02-Jun-2025</em></p>
+
+<p>I recently purchase an HP Visualize C360. This is a 64 Bit PA RISC system. I was unable to get 11.00 installed as I could not find the "HP-UX 11.00 Core OS Options CDs" disc. <br>
+So lets just install 11.11 (aka 11i v1)</p>
+
+<h3>Install Media</h3>
+
+<p>From the <a href="http://tenox.pdp-11.ru/">Tenox OS Archive</a>:</p>
+
+<ul>
+<li>
+<code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD1.rar</code> - <em>Boot from this one</em>
+</li>
+<li><code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD2.rar</code></li>
+<li><code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - TCOE - Core OS, Install and Recovery - CD3.rar</code></li>
+<li>
+<code>os/hpux/OS/11.11/2004-12 MCOE, TCOE, Apps/HP-UX 11.11 (2004-12) - Support Plus - Diagnostics and Tested Patch bundles.iso</code> - <em>Patches after install</em>
+</li>
+</ul>
+
+<p>I connected an external SCSI CDROM (512 byte sectors, not sure if thats required) to the single ended fast wide 68 pin scsi port. My drive ID was set to 1, but it shows up as 4 on the workstation for some reason. The SEArch command will tell you what devices you have.</p>
+
+<p>To Boot: <code>boot fwscsi.4.0</code></p>
+
+<h3>Install notes</h3>
+
+<ul>
+<li>I chose the guided install and let it configure partitioning by itself. </li>
+<li>I picked HP-UX 11i TCOE-64bit for the environment. I'm not sure if there's any downsides to choosing a 64 bit system.</li>
+<li>During software selection, I marked:
+<ul>
+<li>JAVAOOB</li>
+<li>SwPkgBuilder</li>
+<li>B5725AA (IgniteUX)</li>
+<li>Ignite-UX-11-11</li>
+<li>Ignite-UX-11-00</li>
+</ul>
+</li>
+<li>Its incredible how slow the install for HP-UX is.</li>
+</ul>
+
+<h3>Post install, install patches</h3>
+
+<ul>
+<li>Login and run sam. Add your user. Then, open software management, Install software to local host</li>
+<li>With the support cd inserted, mount it: <code>mount /dev/dsk/c0t4d0 /SD_CDROM/</code>
+</li>
+<li>In the add source dialog, point at /SD_CDROM/GOLDQPK11i</li>
+<li>Mark both for install, click Actions-&gt;Install.</li>
+</ul>
+
+<p><img src="/img/blog/002-software.png" alt="software" title=""></p>
+
+<p>Tip for installing from ISOs: <br>
+I mounted the Applications DVD ISO on my NFS server, and bind mounted it into my NFS export. Then, I can point <code>swinstall</code> at this location.  </p>
+
+<pre><code>$ sudo mount -o loop /data/nfs/mirrors/osarchive/hpux/OS/11.11/2004-12\ MCOE\,\ TCOE\,\ Apps/HP-UX\ 11.11\ \(2004-12\)\ -\ TCOE\ -\ Core\ OS\,\ Install\ and\ Recovery\ -\ DVD.iso /mnt/iso
+$ sudo mount --bind /mnt/iso /data/nfs/iso
+</code></pre>
+
+<h3>2009 GOLDQPK Install</h3>
+
+<p>I think the final GOLD pack was in 2009. This is also in Tenox's osarchive. I recommend using this file: <code>os/hpux/OS/11.11/HP-UX 11.11 Support Plus 2009-12.tar.lz</code> <br>
+Extract it and point swinstall at GOLDQPK11i_B.11.11.0912.483.depot</p>
+
+<h3>misc</h3>
+
+<p>I was having issues with my stty setting over telnet. I added this to my .bash_profile: <code>stty intr ^C erase ^H</code> <br>
+Also, bash is my shell for my user.</p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - C compilers</div>
+<div class="main-body"><content>
+<h2>C compilers</h2>
+
+<p>The builtin cc only works for compiling the kernel. I'm going to install HP ansic and whatever version of GCC I can find. I believe GCC is only built for 32bit ABI, which is okay.</p>
+
+<h3>ansic (HP aCC)</h3>
+
+<p>You can download ansic from from osarchive.org: <br>
+<code>os/hpux/OS/11.11/ansic/B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot.lz</code></p>
+
+<ol>
+<li>Run <code>swinstall</code> and open <code>B9007AA_B.11.11.20_HP-UX_B.11.11_32_64.depot</code>
+</li>
+<li>Mark everything for install. Go to Actions-&gt;Install, and let it do its thing.</li>
+</ol>
+
+<h3>GCC Toolchain</h3>
+
+<p>I'm going to install GCC 4.2.3 from this archive: http://ftp.netbsd.org/pub/pkgsrc/misc/tnn/ <br>
+This person used it to build pkgsrc a few years ago: https://vanalboom.org/node/17.html</p>
+
+<p>Just untar it in <code>/</code> and add <code>/usr/local/gcc4/bin</code> to your PATH and make the headers.</p>
+
+<pre><code>/usr/local/gcc4/libexec/gcc/hppa2.0w-hp-hpux11.11/4.2.3/install-tools/mkheaders
+</code></pre>
+
+<h3>Various tools, in order</h3>
+
+<p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
+
+<p><em>I picked these version numbers randomly</em> <br>
+<em>Assume gcc unless otherwise specified</em></p>
+
+<p>make-1.79: <code>export CC=cc; ./configure; make</code> <em>you can probably go straight to 3.80+ here instead of 3.79</em> <br>
+m4-1.4.16: <code>./configure; make</code> <br>
+autoconf-2.69: <code>./configure; make</code> <br>
+automake-1.6.3: <code>./configure; make</code> <br>
+automake-1.8.5: <code>./configure; make</code></p>
+
+<p>If you get this error:  <code>/usr/ccs/bin/ld: Unrecognized argument: +init</code> <br>
+Make sure <code>PHSS_39749 (s700_800 11.11 ld(1) and linker tools cumulative patch)</code> is installed. It is included in the 2009 Support Plus depot.  </p>
+
+<p>That fixes HP's ld so it actually works.</p>
+
+<h3>GCC 4.8.5</h3>
+
+<p><code>export PATH=/usr/local/bin:/usr/local/gcc4/bin:$PATH</code></p>
+
+<p>I build some tools first:</p>
+
+<ol>
+<li>tar-1.27.1</li>
+<li>gawk-3.1.8</li>
+<li>sed-4.2.2</li>
+<li>grep-2.6.3</li>
+<li>make-3.82</li>
+<li>binutils-2.23.2: configure like this: <code>./configure --prefix=/usr/local/gcc-4.8.5 --disable-nls</code>
+</li>
+</ol>
+
+<p><em>I tried binutils 2.25.1 first, but it did not work correctly. It kept telling me the archive files were for 64 Bit ABI. <code>ar</code> may have been broken. 2.23.2 seems to work well</em></p>
+
+<p>GCC build reqs:</p>
+
+<p><code>export CC=gcc</code> <br>
+Add binutils to PATH: <br>
+<code>export PATH=/usr/local/gcc-4.8.5/bin:$PATH</code>  </p>
+
+<p>gmp should detect <code>ABI=2.0n</code>. If not, <code>export ABI=2.0n</code>.</p>
+
+<ol>
+<li>gmp-6.1.2</li>
+<li>mpfr-3.1.6</li>
+<li>mpc-1.0.3</li>
+</ol>
+
+<p>I skipped <code>make check</code>. I'm lazy.</p>
+
+<pre><code>./configure --prefix=/usr/local/gcc-4.8.5 --enable-languages=c,c++ --disable-nls --enable-threads=posix --with-gmp=/usr/local --with-mpfr=/usr/local --with-mpc=/usr/local --with-gnu-as --with-as=/usr/local/gcc-4.8.5/bin/as --without-gnu-ld
+</code></pre>
+
+<p>This compile took over 12 hours on the C360.</p>
+
+<p>I ended up recompiling because I did <code>--without-gnu-as</code> the first time and that doesn't work; you want gnu as. <br>
+I did the second compile on my C8000 with a dual core 1.1 GHz PA, and it completed in 4 ish hours.</p>
+
+<p>My PATH order was: <br>
+<code>export PATH=/usr/local/gcc-4.8.5/bin:/usr/local/gcc4/bin:/usr/local/bin:$PATH</code></p>
+
+<p>DONE. You now have GCC 4.8.5 in /usr/local/gcc-4.8.5 with GNU as V2.23.2.</p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Software building</div>
+<div class="main-body"><content>
+<h2>Software building</h2>
+
+<p>Lets try out the audio on this C360 and build mikmod and play some mod files. We'll start our attempts with ansic.</p>
+
+<ul>
+<li>libmikmod-3.1.10</li>
+<li>mikmod-3.2.7</li>
+</ul>
+
+<p>libmikmod built wihtout issues. <br>
+mikmod is having issues with HP's curses. I'm going to try to build ncurses.</p>
+
+<ul>
+<li>ncurses-5.2</li>
+</ul>
+
+<p>Built with ./configure and installed into /usr/local</p>
+
+<p>mikmod: <code>./configure CPPFLAGS="-I/usr/local/include -I/usr/local/include/ncurses" LDFLAGS="-L/usr/local/lib"</code> <br>
+Then I get this error:  </p>
+
+<pre><code>usr/ccs/bin/ld: Unsatisfied symbols:
+    __getmaxy (code)
+    __getmaxx (code)
+</code></pre>
+
+<p>Now, on line 162 in <code>src/mwindow.c</code>, we run into an issue since its assuming we have the broken HP-UX curses. Just change the name of the variable in <code>#if defined(__hpux)</code> to make it not define those macros.</p>
+
+<p><em>And, success!</em>  We have sound output on the C360! Eventually, I want to figure out if a new mikmod works out of the box without changes.</p>
+
+<p><em>I failed to make ncurses 6.5 work because the the test program for mikmod wont build with aCC. I need GCC for that to work I believe. Leave notes here for future work with GCC.</em></p>
+
+<p>ncurses-6.5 <br>
+Fetched from gnu and it built without any issues. Build non wide character support: <br>
+<code>./configure --prefix=/usr/local --with-shared --with-normal --with-termlib --disable-widec</code></p>
+
+</content></div>
+</div>
+<div class="main-body-container">
+<div class="window-title">Terminal - Adding a second disk</div>
+<div class="main-body"><content>
+<h2>Adding a second disk</h2>
+
+<p>I quickly ran low on disk space with a 9GB disk, so I added a second one to put /home and /usr/local on.</p>
+
+<p>In SAM, Disks and File systems, I selected the disk, Actions-&gt;Configure. I added this to a new Volume Group, vg01.</p>
+
+<p>Next, I went to Logical Volumes and created 2 new LVs, both 1GB each, to allow room to grow the LVs in the future.
+Next, I went to file systems and mounted the new LVs in temporary locations. I copied all the data to the new filesystem. <code>cd /home; tar cpf - . | (cd /home2 &amp;&amp; tar xpf -)</code></p>
+
+<p>Then, unmounted the old ones, mounted the new ones in the correct locations, and made sure the new LVs didn't automount and the new ones did. My LVs look like this now:</p>
+
+<p><img src="/img/blog/002-lv.png" alt="LVM" title=""></p>
+
+<p>I also added my NFS server to auto mount at startup in Filesystems.</p>
+</content></div>
+</div>
+</td>
+<td class="td-spacer"></td>
+</tr></tbody></table></body>
+</html>

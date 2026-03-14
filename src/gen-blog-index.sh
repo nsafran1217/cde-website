@@ -2,16 +2,15 @@
 
 set -e
 
-cd content/blog
-cat index_head.x > index.xml
+cd blog
+cat ../src/templates/index_head.x > index.xml
 
 # Loop through all .md files and extract the date
-for file in `ls *.md | sort -r`; do
+for file in `ls 0*.md | sort -r`; do
     # Extract the title
     title=$(grep -m 1 '^# ' "$file")
     title="${title#\# }"
 
-    
     # Extract the date from the second line
     date=$(sed -n 's/^\*Published: \(.*\) - Last Updated: .*$/\1/p' "$file")
 
@@ -24,3 +23,7 @@ for file in `ls *.md | sort -r`; do
 done
 
 echo "</table></content></section></sections></page>" >> index.xml
+
+xsltproc -o index.html ../src/templates/article.xslt index.xml
+# delete intermediate xml
+rm index.xml
