@@ -3,7 +3,7 @@
 set -e
 
 cd blog
-cat ../src/templates/index_head.x > index.xml
+cat ../src/templates/blog_index_head.x > index.xml
 
 # Loop through all .md files and extract the date
 for file in `ls 0*.md | sort -r`; do
